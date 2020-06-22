@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.div`
   height: 72px;
   width: 480px;
-  border-top: 1px solid black;
+  border-top: 1px solid #333;
   background: #fff;
   position: fixed;
   bottom: 0;
@@ -15,8 +15,7 @@ export const FooterWrapper = styled.div`
     cursor: pointer;
   }
   .iconfont {
-    font-size: 20px;
-    margin-right: 6px;
+    font-size: 25px;
     display: block;
     height: 40px;
     line-height: 50px;
@@ -26,6 +25,6 @@ export const FooterWrapper = styled.div`
     height: 24px;
   }
   .isSelected {
-    color: blue;
+    color: #0084ff;
   }
 `;

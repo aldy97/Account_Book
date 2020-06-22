@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HeaderWrapper } from '../header/style';
+import { HeaderWrapper } from '../../../commons/header/style';
 
 export const Wrapper = styled(HeaderWrapper)`
   padding-left: 10px;
