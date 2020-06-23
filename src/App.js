@@ -16,8 +16,8 @@ function App() {
       <Header />
       <BrowserRouter>
         <div>
-          <Route path='/' exact component={Home}></Route>
-          <Route path='/stat' exact component={Stat}></Route>
+          <Route path='/home' exact component={Home}></Route>
+          <Route path='/statistics' exact component={Stat}></Route>
           <Route path='/setting' exact component={Setting}></Route>
         </div>
       </BrowserRouter>

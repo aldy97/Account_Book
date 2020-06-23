@@ -1,43 +1,71 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import { FooterWrapper } from './style';
 
-function Footer() {
-  //初始状态下显示Details（home）界面
-  const [isSelected, setSelected] = useState([true, false, false]);
-  return (
-    <FooterWrapper>
-      <div
-        className={isSelected[0] ? 'navItem isSelected' : 'navItem'}
-        onClick={() => {
-          setSelected([true, false, false]);
-          window.location.href = '/';
-        }}
-      >
-        <i className='iconfont'>&#xe689;</i>
-        <div className='text'>Details</div>
-      </div>
-      <div
-        className={isSelected[1] ? 'navItem isSelected' : 'navItem'}
-        onClick={() => {
-          setSelected([false, true, false]);
-          window.location.href = '/stat';
-        }}
-      >
-        <i className='iconfont'>&#xe60a;</i>
-        <div className='text'>Statistics</div>
-      </div>
-      <div
-        className={isSelected[2] ? 'navItem isSelected' : 'navItem'}
-        onClick={() => {
-          setSelected([false, false, true]);
-          window.location.href = '/setting';
-        }}
-      >
-        <i className='iconfont'>&#xe781;</i>
-        <div className='text'>Settings</div>
-      </div>
-    </FooterWrapper>
-  );
+class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSelected: [false, false, false],
+    };
+  }
+
+  componentDidMount = () => {
+    const urlParams = window.location.href;
+    const keyword = urlParams.split('/')[3];
+    if (keyword === 'home') {
+      this.setState(() => {
+        return { isSelected: [true, false, false] };
+      });
+    } else if (keyword === 'statistics') {
+      this.setState(() => {
+        return { isSelected: [false, true, false] };
+      });
+    } else {
+      this.setState(() => {
+        return { isSelected: [false, false, true] };
+      });
+    }
+  };
+
+  render() {
+    return (
+      <FooterWrapper>
+        <div
+          className={
+            this.state.isSelected[0] ? 'navItem isSelected' : 'navItem'
+          }
+          onClick={() => {
+            window.location.href = '/home';
+          }}
+        >
+          <i className='iconfont'>&#xe689;</i>
+          <div className='text'>Details</div>
+        </div>
+        <div
+          className={
+            this.state.isSelected[1] ? 'navItem isSelected' : 'navItem'
+          }
+          onClick={() => {
+            window.location.href = '/statistics';
+          }}
+        >
+          <i className='iconfont'>&#xe60a;</i>
+          <div className='text'>Statistics</div>
+        </div>
+        <div
+          className={
+            this.state.isSelected[2] ? 'navItem isSelected' : 'navItem'
+          }
+          onClick={() => {
+            window.location.href = '/setting';
+          }}
+        >
+          <i className='iconfont'>&#xe781;</i>
+          <div className='text'>Settings</div>
+        </div>
+      </FooterWrapper>
+    );
+  }
 }
 
 export default Footer;
