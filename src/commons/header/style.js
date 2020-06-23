@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import theme from '../../static/theme/index';
 
 export const HeaderWrapper = styled.div`
   height: 100px;
-  background: #0084ff;
+  background: ${theme.$blue};
   color: rgb(237, 245, 237);
   .title {
     height: auto;
-    font-size: 22px;
+    font-size: ${theme.$largeTextSize};
     text-align: center;
     line-height: 100px;
   }

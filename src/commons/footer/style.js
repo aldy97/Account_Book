@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import theme from '../../static/theme/index';
 
 export const FooterWrapper = styled.div`
   height: 72px;
   width: 480px;
   border-top: 1px solid #333;
-  background: #fff;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -25,6 +25,6 @@ export const FooterWrapper = styled.div`
     height: 24px;
   }
   .isSelected {
-    color: #0084ff;
+    color: ${theme.$blue};
   }
 `;

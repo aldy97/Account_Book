@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../../static/theme/index';
 import { HeaderWrapper } from '../../../commons/header/style';
 
 export const Wrapper = styled(HeaderWrapper)`
@@ -20,7 +21,7 @@ export const ButtonWrapper = styled.div`
   }
   i {
     flex: 1;
-    font-size: 25px;
+    font-size: ${theme.$largeTextSize};
     text-align: center;
     line-height: 35px;
     font-weight: 500;
@@ -36,14 +37,14 @@ export const DateWrapper = styled.div`
   .date {
     flex: 1;
     cursor: pointer;
-    font-size: 16px;
+    font-size: ${theme.$middleTextSize};
     i {
       margin-left: 4px;
     }
   }
   .out-income {
     flex: 2;
-    font-size: 14px;
+    font-size: ${theme.$smallTextSize};
     font-weight: 300;
     .outcome {
       margin-right: 6px;
