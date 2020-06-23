@@ -5,8 +5,15 @@ function Setting() {
   return (
     <div>
       <Item>
-        <i className='iconfont' style={{ 'margin-right': '8px' }}>
-          &#xe6c0;
+        <i
+          className='iconfont'
+          style={{
+            'margin-right': '10px',
+            'margin-left': '3px',
+            'font-size': '25px',
+          }}
+        >
+          &#xe701;
         </i>
         Recommend this to your friends
       </Item>
