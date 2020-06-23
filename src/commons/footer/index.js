@@ -12,6 +12,7 @@ class Footer extends Component {
   componentDidMount = () => {
     const urlParams = window.location.href;
     const keyword = urlParams.split('/')[3];
+
     if (keyword === '') {
       this.setState(() => {
         return { isSelected: [true, false, false] };
@@ -41,6 +42,7 @@ class Footer extends Component {
           <i className='iconfont'>&#xe689;</i>
           <div className='text'>Details</div>
         </div>
+
         <div
           className={
             this.state.isSelected[1] ? 'navItem isSelected' : 'navItem'
@@ -50,8 +52,9 @@ class Footer extends Component {
           }}
         >
           <i className='iconfont'>&#xe60a;</i>
-          <div className='text'>Statistics</div>
+          <div className='text'>Analysis</div>
         </div>
+
         <div
           className={
             this.state.isSelected[2] ? 'navItem isSelected' : 'navItem'

@@ -45,7 +45,6 @@ export const DateWrapper = styled.div`
   .out-income {
     flex: 2;
     font-size: ${theme.$smallTextSize};
-    font-weight: 300;
     .outcome {
       margin-right: 6px;
     }

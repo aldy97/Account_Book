@@ -8,6 +8,7 @@ function StatesHeader() {
         <div>All types</div>
         <i className='iconfont'>&#xe6c0;</i>
       </ButtonWrapper>
+
       <DateWrapper>
         <span className='date'>
           2020 June 22
