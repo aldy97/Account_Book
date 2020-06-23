@@ -12,7 +12,7 @@ class Footer extends Component {
   componentDidMount = () => {
     const urlParams = window.location.href;
     const keyword = urlParams.split('/')[3];
-    if (keyword === 'home') {
+    if (keyword === '') {
       this.setState(() => {
         return { isSelected: [true, false, false] };
       });
@@ -35,7 +35,7 @@ class Footer extends Component {
             this.state.isSelected[0] ? 'navItem isSelected' : 'navItem'
           }
           onClick={() => {
-            window.location.href = '/home';
+            window.location.href = '/';
           }}
         >
           <i className='iconfont'>&#xe689;</i>
