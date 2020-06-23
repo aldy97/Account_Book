@@ -48,4 +48,9 @@ export const DateWrapper = styled.div`
       margin-right: 6px;
     }
   }
+  @media (max-width: 500px) {
+    .out-income {
+      font-size: 2px;
+    }
+  }
 `;
