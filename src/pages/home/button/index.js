@@ -8,6 +8,7 @@ function Button() {
     height: 50px;
     cursor: pointer;
     border: 1px solid #666;
+    background: white;
     box-shadow: 1px 1px 2px 1px #666;
     border-radius: 50%;
     text-align: center;

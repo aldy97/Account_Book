@@ -4,8 +4,10 @@ import theme from '../../static/theme/index';
 export const FooterWrapper = styled.div`
   height: ${theme.$footerHeight};
   width: ${theme.$width};
+  background: white;
   border-top: 1px solid #333;
   position: fixed;
+  z-index: 10;
   bottom: 0;
   display: flex;
   @media (max-width: 500px) {

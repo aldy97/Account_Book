@@ -8,6 +8,9 @@ function Central() {
     height: 1000px;
     overflow: scroll;
     z-index: 8;
+    position: relative;
+    top: 200px;
+    bottom: 72px;
   `;
 
   return (
