@@ -1,10 +1,10 @@
 import React from 'react';
 import { Wrapper, ButtonWrapper, DateWrapper } from './style';
 
-function StatesHeader() {
+function StatesHeader(props) {
   return (
     <Wrapper>
-      <ButtonWrapper>
+      <ButtonWrapper onClick={props.handleSetShow}>
         <div>All types</div>
         <i className='iconfont'>&#xe6c0;</i>
       </ButtonWrapper>
