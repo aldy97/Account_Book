@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
-  width: ${theme.$width};
-  position: absolute;
+  width: 478px;
+  position: fixed;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;

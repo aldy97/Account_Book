@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 import { HeaderWrapper } from '../../../commons/header/style';
 
-export const Wrapper = styled(HeaderWrapper)``;
+export const Wrapper = styled(HeaderWrapper)`
+  position: fixed;
+  top: 100px;
+`;
 
 export const ButtonWrapper = styled.div`
   width: ${theme.$buttonWidth};

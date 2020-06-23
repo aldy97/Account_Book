@@ -3,7 +3,7 @@ import { Item } from './style';
 
 function Setting() {
   return (
-    <div>
+    <div style={{ 'margin-top': '100px' }}>
       <Item>
         <i
           className='iconfont'

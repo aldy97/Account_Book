@@ -6,11 +6,15 @@ function Button() {
   const ButtonWrapper = styled.div`
     width: 50px;
     height: 50px;
-    border: 1px solid black;
+    cursor: pointer;
+    border: 1px solid #666;
+    box-shadow: 1px 1px 2px 1px #666;
     border-radius: 50%;
-    position: fixed;
-    bottom: 100px;
     text-align: center;
+    position: fixed;
+    bottom: 92px;
+    margin-left: 410px;
+    z-index: 10;
     i {
       font-size: 30px;
       line-height: 50px;
