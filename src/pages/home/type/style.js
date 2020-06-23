@@ -3,7 +3,10 @@ import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
   width: ${theme.$width};
   position: absolute;
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 5px;
   bottom: 72px;
   background: ${theme.$white};
   @media (max-width: 500px) {
@@ -13,6 +16,7 @@ export const TypeWrapper = styled.div`
 
 export const CloseBar = styled.div`
   height: ${theme.$barHeight};
+  border-bottom: 1px solid #666;
   i {
     font-size: 30px;
     color: #666;

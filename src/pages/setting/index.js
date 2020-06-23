@@ -9,7 +9,7 @@ function Setting() {
           className='iconfont'
           style={{
             'margin-right': '10px',
-            'margin-left': '3px',
+            'margin-left': '12px',
             'font-size': '25px',
           }}
         >
