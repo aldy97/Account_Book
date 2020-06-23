@@ -1,20 +1,18 @@
 import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
-  height: calc(60vh);
   width: ${theme.$width};
   position: absolute;
-  bottom: 72px;
   border: 1px solid black;
-  border-bottom: none;
-  border-radius: 5px;
+  bottom: 72px;
   background: ${theme.$white};
+  @media (max-width: 500px) {
+    width: calc(100vw);
+  }
 `;
 
 export const CloseBar = styled.div`
-  width: ${theme.$width};
   height: ${theme.$barHeight};
-  border-bottom: 1px solid black;
   i {
     font-size: 30px;
     color: #666;
@@ -28,7 +26,6 @@ export const CloseBar = styled.div`
 `;
 
 export const OutCome = styled.div`
-  width: ${theme.$width};
   .title {
     margin-left: 8px;
     margin-top: 8px;
@@ -40,7 +37,6 @@ export const OutCome = styled.div`
 export const InCome = styled(OutCome)``;
 
 export const ItemWrapper = styled.div`
-  width: ${theme.$width};
   display: flex;
   flex-wrap: wrap;
 `;

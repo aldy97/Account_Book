@@ -2,14 +2,17 @@ import styled from 'styled-components';
 import theme from '../../static/theme/index';
 
 export const FooterWrapper = styled.div`
-  height: 72px;
-  width: 480px;
+  height: ${theme.$footerHeight};
+  width: ${theme.$width};
   border-top: 1px solid #333;
   position: fixed;
   bottom: 0;
   display: flex;
+  @media (max-width: 500px) {
+    width: calc(100vw);
+  }
   .navItem {
-    height: 72px;
+    height: ${theme.$footerHeight};
     flex: 1;
     text-align: center;
     cursor: pointer;

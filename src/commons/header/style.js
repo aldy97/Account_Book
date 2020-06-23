@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import theme from '../../static/theme/index';
 
 export const HeaderWrapper = styled.div`
+  width: ${theme.$width};
   height: 100px;
   background: ${theme.$blue};
   color: rgb(237, 245, 237);
@@ -10,5 +11,8 @@ export const HeaderWrapper = styled.div`
     font-size: ${theme.$largeTextSize};
     text-align: center;
     line-height: 100px;
+  }
+  @media (max-width: 500px) {
+    width: calc(100vw);
   }
 `;

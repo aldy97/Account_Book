@@ -6,6 +6,10 @@ const theme = {
   $middleTextSize: '16px',
   $smallTextSize: '14px',
   $barHeight: '50px',
+  $marginLeft: '15px',
+  $buttonHeight: '35px',
+  $buttonWidth: '135px',
+  $footerHeight: '72px',
 };
 
 export default theme;
