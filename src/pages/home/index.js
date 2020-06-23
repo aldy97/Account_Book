@@ -3,7 +3,7 @@ import StateHeader from './statsheader/index';
 import Type from './type/index';
 
 function Home() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const showType = (show) => {
     if (show) {

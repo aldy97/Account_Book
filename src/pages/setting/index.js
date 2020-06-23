@@ -15,7 +15,7 @@ function Setting() {
         >
           &#xe701;
         </i>
-        Recommend this to your friends
+        Recommend this app to your friends
       </Item>
       <Item
         onClick={() =>
@@ -32,6 +32,10 @@ function Setting() {
       >
         <i className='iconfont'>&#xe6cb;</i>
         Contact me
+      </Item>
+      <Item>
+        <i className='iconfont'>&#xe781;</i>
+        General Settings
       </Item>
     </div>
   );

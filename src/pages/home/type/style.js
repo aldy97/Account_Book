@@ -4,8 +4,10 @@ export const TypeWrapper = styled.div`
   height: calc(60vh);
   width: ${theme.$width};
   position: absolute;
-  bottom: 0;
-  border-top: 1px solid black;
+  bottom: 72px;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 5px;
   background: ${theme.$white};
 `;
 
@@ -31,6 +33,7 @@ export const OutCome = styled.div`
     margin-left: 8px;
     margin-top: 8px;
     font-size: ${theme.$middleTextSize};
+    color: ${theme.$blue};
   }
 `;
 
@@ -39,12 +42,15 @@ export const InCome = styled(OutCome)``;
 export const ItemWrapper = styled.div`
   width: ${theme.$width};
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const Item = styled.div`
-  flex: 1;
+  flex-grow: 1;
+  width: 25%;
   height: ${theme.$barHeight};
   border: 1px solid black;
+  border-radius: 5px;
   margin: 8px;
   text-align: center;
   cursor: pointer;

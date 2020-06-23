@@ -63,8 +63,8 @@ class Footer extends Component {
             window.location.href = '/setting';
           }}
         >
-          <i className='iconfont'>&#xe781;</i>
-          <div className='text'>Settings</div>
+          <i className='iconfont'>&#xe610;</i>
+          <div className='text'>Me</div>
         </div>
       </FooterWrapper>
     );

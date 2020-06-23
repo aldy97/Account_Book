@@ -47,6 +47,20 @@ function Type(props) {
       </OutCome>
       <InCome>
         <div className='title'>Income</div>
+        <ItemWrapper>
+          <Item>
+            <i className='iconfont 工资'>&#xe615;</i>
+            <div className='text'>Salary</div>
+          </Item>
+          <Item>
+            <i className='iconfont 股票'>&#xe652;</i>
+            <div className='text'>Investment</div>
+          </Item>
+          <Item>
+            <i className='iconfont 礼金'>&#xe667;</i>
+            <div className='text'>Cash Gift</div>
+          </Item>
+        </ItemWrapper>
       </InCome>
     </TypeWrapper>
   );

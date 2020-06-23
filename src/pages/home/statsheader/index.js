@@ -5,7 +5,7 @@ function StatesHeader(props) {
   return (
     <Wrapper>
       <ButtonWrapper onClick={props.handleSetShow}>
-        <div>All types</div>
+        <div>All Types</div>
         <i className='iconfont'>&#xe6c0;</i>
       </ButtonWrapper>
 
