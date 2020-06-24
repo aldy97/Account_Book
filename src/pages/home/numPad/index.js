@@ -21,6 +21,7 @@ function NumberPad(props) {
       border: 4px solid #fafafa;
       &.zero {
         width: 50%;
+        color: #000;
       }
       &.OK {
         height: 192px;

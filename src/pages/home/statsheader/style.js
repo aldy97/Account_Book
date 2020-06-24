@@ -39,6 +39,7 @@ export const DateWrapper = styled.div`
   .date {
     flex: 1;
     cursor: pointer;
+    margin-left: 15px;
     font-size: ${theme.$middleTextSize};
     i {
       margin-left: 4px;

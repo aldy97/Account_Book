@@ -12,7 +12,7 @@ function StatesHeader(props) {
 
       <DateWrapper>
         <span className='date' onClick={props.handleSetShowMonth}>
-          {moment().format('MMMM Do YYYY')}
+          {moment().format('MMMM YYYY')}
           <i className='iconfont' name='arrow-down'>
             &#xe668;
           </i>
