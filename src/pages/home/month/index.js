@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TypeWrapper, CloseBar } from '../type/style';
+import { TypeWrapper, CloseBar, Item, ItemWrapper } from '../type/style';
 import theme from '../../../static/theme/index';
 
 function SelectMonth(props) {
@@ -9,14 +9,16 @@ function SelectMonth(props) {
   `;
 
   const Year = styled.div`
-    height: ${theme.$barHeight};
+    height: 30px;
     text-align: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: ${theme.$dropDownMargin};
     color: #666;
+    line-height: 30px;
   `;
 
-  const MonthSection = styled.div``;
+  const ItemMonth = styled(Item)`
+    line-height: ${theme.$barHeight};
+  `;
 
   return (
     <Wrapper>
@@ -27,7 +29,14 @@ function SelectMonth(props) {
         <div>Choose Month</div>
       </CloseBar>
       <Year>2020</Year>
-      <MonthSection></MonthSection>
+      <ItemWrapper>
+        <ItemMonth>Jan</ItemMonth>
+        <ItemMonth>Feb</ItemMonth>
+        <ItemMonth>Mar</ItemMonth>
+        <ItemMonth>Apr</ItemMonth>
+        <ItemMonth>May</ItemMonth>
+        <ItemMonth>June</ItemMonth>
+      </ItemWrapper>
     </Wrapper>
   );
 }

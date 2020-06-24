@@ -24,7 +24,7 @@ function Type(props) {
             <div className='text'>Clothing</div>
           </Item>
           <Item>
-            <i className='iconfont 采购'>&#xe60f;</i>
+            <i className='iconfont 采购'>&#xe603;</i>
             <div className='text'>Groceries</div>
           </Item>
           <Item>
@@ -40,8 +40,68 @@ function Type(props) {
             <div className='text'>Commuting</div>
           </Item>
           <Item>
-            <i className='iconfont 饮料'>&#xe61c;</i>
-            <div className='text'>Drinks</div>
+            <i className='iconfont'>&#xe644;</i>
+            <div className='text'>Social</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe647;</i>
+            <div className='text'>Communication</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe64d;</i>
+            <div className='text'>Medical</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe64f;</i>
+            <div className='text'>Pets</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe651;</i>
+            <div className='text'>Cars</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe620;</i>
+            <div className='text'>Entertainment</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe604;</i>
+            <div className='text'>Office</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe633;</i>
+            <div className='text'>Maintainance</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe63a;</i>
+            <div className='text'>Sports</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe63b;</i>
+            <div className='text'>Housing</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe61d;</i>
+            <div className='text'>Donation</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe613;</i>
+            <div className='text'>Fruits</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe614;</i>
+            <div className='text'>Wine & Cig</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe60b;</i>
+            <div className='text'>Travel</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe697;</i>
+            <div className='text'>Gifts</div>
+          </Item>
+          <Item>
+            <i className='iconfont 饮料'>&#xe625;</i>
+            <div className='text'>Books</div>
           </Item>
         </ItemWrapper>
       </OutCome>
@@ -59,6 +119,10 @@ function Type(props) {
           <Item>
             <i className='iconfont 礼金'>&#xe667;</i>
             <div className='text'>Cash Gift</div>
+          </Item>
+          <Item>
+            <i className='iconfont 礼金'>&#xe65d;</i>
+            <div className='text'>Part time</div>
           </Item>
         </ItemWrapper>
       </InCome>

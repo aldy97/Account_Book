@@ -23,7 +23,7 @@ export const CloseBar = styled.div`
     font-size: 30px;
     color: #666;
     line-height: ${theme.$barHeight};
-    margin-left: 2px;
+    margin-left: 6px;
     cursor: pointer;
   }
   i: hover {
@@ -38,7 +38,7 @@ export const CloseBar = styled.div`
 
 export const OutCome = styled.div`
   .title {
-    margin-left: 8px;
+    margin-left: ${theme.$dropDownMargin};
     margin-top: 8px;
     font-size: ${theme.$middleTextSize};
     color: ${theme.$blue};
@@ -54,12 +54,12 @@ export const ItemWrapper = styled.div`
 `;
 
 export const Item = styled.div`
-  flex-grow: 1;
-  width: 25%;
+  width: 133px;
+  background: #eee;
   height: ${theme.$barHeight};
   border: 1px solid black;
   border-radius: 5px;
-  margin: 8px;
+  margin: ${theme.$dropDownMargin};
   text-align: center;
   cursor: pointer;
   i {

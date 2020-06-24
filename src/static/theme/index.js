@@ -12,6 +12,7 @@ const theme = {
   $footerHeight: '72px',
   $typeHeight: '350px',
   $selectMonthHeight: '250px',
+  $dropDownMargin: 'calc(0.83vw)',
 };
 
 export default theme;
