@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wrapper, ButtonWrapper, DateWrapper } from './style';
+import moment from 'moment';
 
 function StatesHeader(props) {
   return (
@@ -11,8 +12,10 @@ function StatesHeader(props) {
 
       <DateWrapper>
         <span className='date' onClick={props.handleSetShowMonth}>
-          2020 June 22
-          <i className='iconfont'>&#xe668;</i>
+          {moment().format('MMMM Do YYYY')}
+          <i className='iconfont' name='arrow-down'>
+            &#xe668;
+          </i>
         </span>
         <span className='out-income'>
           <span className='outcome'>Total outcome: $0.00</span>

@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
   width: 478px;
-  height: calc(87vh);
+  height: calc(100vh);
   overflow: scroll;
   position: fixed;
   z-index: 20;
   border: 1px solid #eee;
   box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
-  border-radius: 5px;
-  bottom: 0;
+  top: 100;
   background: ${theme.$white};
   @media (max-width: 500px) {
     width: calc(100vw);

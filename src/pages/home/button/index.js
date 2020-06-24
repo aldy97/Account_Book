@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 
-function Button() {
+function Button(props) {
   const ButtonWrapper = styled.div`
     width: 50px;
     height: 50px;
     cursor: pointer;
-    border: 1px solid #666;
+    border: 1px solid #fff;
     background: white;
-    box-shadow: 1px 1px 2px 1px #666;
+    box-shadow: 0 2px 24px -6px #666;
     border-radius: 50%;
     text-align: center;
     position: fixed;
@@ -23,8 +23,10 @@ function Button() {
     }
   `;
   return (
-    <ButtonWrapper>
-      <i className='iconfont'>&#xe612;</i>
+    <ButtonWrapper onClick={props.handleSetShowNumPad}>
+      <i className='iconfont' name='记账'>
+        &#xe612;
+      </i>
     </ButtonWrapper>
   );
 }

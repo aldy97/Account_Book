@@ -1,7 +1,8 @@
 import React from 'react';
+import NumPad from '../home/numPad/index';
 
 function Stat() {
-  return <div>Stat</div>;
+  return <NumPad />;
 }
 
 export default Stat;
