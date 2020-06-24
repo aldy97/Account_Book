@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
   width: 478px;
+  height: ${theme.$typeHeight};
+  overflow: scroll;
   position: fixed;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  z-index: 20;
+  border: 1px solid #eee;
+  box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
   border-radius: 5px;
-  bottom: 72px;
+  bottom: 0;
   background: ${theme.$white};
   @media (max-width: 500px) {
     width: calc(100vw);
@@ -16,7 +18,7 @@ export const TypeWrapper = styled.div`
 
 export const CloseBar = styled.div`
   height: ${theme.$barHeight};
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #eee;
   i {
     font-size: 30px;
     color: #666;
@@ -26,6 +28,11 @@ export const CloseBar = styled.div`
   }
   i: hover {
     color: #000;
+  }
+  div {
+    display: inline-block;
+    height: ${theme.$barHeight};
+    margin-left: calc(10.5vw);
   }
 `;
 
@@ -42,7 +49,8 @@ export const InCome = styled(OutCome)``;
 
 export const ItemWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-start;
 `;
 
 export const Item = styled.div`

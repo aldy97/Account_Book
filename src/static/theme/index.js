@@ -10,6 +10,8 @@ const theme = {
   $buttonHeight: '35px',
   $buttonWidth: '135px',
   $footerHeight: '72px',
+  $typeHeight: '350px',
+  $selectMonthHeight: '250px',
 };
 
 export default theme;

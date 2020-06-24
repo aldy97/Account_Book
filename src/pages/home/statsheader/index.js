@@ -10,7 +10,7 @@ function StatesHeader(props) {
       </ButtonWrapper>
 
       <DateWrapper>
-        <span className='date'>
+        <span className='date' onClick={props.handleSetShowMonth}>
           2020 June 22
           <i className='iconfont'>&#xe668;</i>
         </span>

@@ -5,7 +5,8 @@ export const FooterWrapper = styled.div`
   height: ${theme.$footerHeight};
   width: ${theme.$width};
   background: white;
-  border-top: 1px solid #333;
+  border-top: 2px solid #eee;
+  box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
   position: fixed;
   z-index: 10;
   bottom: 0;
