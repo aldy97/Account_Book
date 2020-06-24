@@ -4,9 +4,7 @@ import { TypeWrapper, CloseBar, Item, ItemWrapper } from '../type/style';
 import theme from '../../../static/theme/index';
 
 function SelectMonth(props) {
-  const Wrapper = styled(TypeWrapper)`
-    height: ${theme.$selectMonthHeight};
-  `;
+  const Wrapper = styled(TypeWrapper)``;
 
   const Year = styled.div`
     height: 30px;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
   width: 478px;
-  height: ${theme.$typeHeight};
+  height: calc(87vh);
   overflow: scroll;
   position: fixed;
   z-index: 20;

@@ -5,7 +5,6 @@ import theme from '../../../static/theme/index';
 function Central() {
   const CentralWrapper = styled.div`
     width: ${theme.$width};
-    height: 1000px;
     overflow: scroll;
     z-index: 8;
     position: relative;
