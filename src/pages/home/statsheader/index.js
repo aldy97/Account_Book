@@ -1,11 +1,27 @@
 import React from 'react';
-import { Wrapper, ButtonWrapper, DateWrapper } from './style';
+import { Wrapper, ButtonWrapper } from './style';
 import moment from 'moment';
+import theme from '../../../static/theme/index';
+import styled from 'styled-components';
 
 function StatesHeader(props) {
+  const DateWrapper = styled.div`
+    padding: 18px 18px;
+    span {
+      font-size: ${theme.$smallTextSize};
+      color: #fff;
+    }
+    .date {
+      margin-right: 8px;
+    }
+  `;
+
   return (
     <Wrapper>
-      <ButtonWrapper onClick={props.handleSetShow}>
+      <ButtonWrapper
+        onClick={props.handleSetShow}
+        style={{ cursor: 'pointer' }}
+      >
         <div>All Types</div>
         <i className='iconfont'>&#xe6c0;</i>
       </ButtonWrapper>
@@ -13,14 +29,14 @@ function StatesHeader(props) {
       <DateWrapper>
         <span className='date' onClick={props.handleSetShowMonth}>
           {moment().format('MMMM YYYY')}
-          <i className='iconfont' name='arrow-down'>
+          <i className='iconfont' name='arrow-down' style={{ marginLeft: 4 }}>
             &#xe668;
           </i>
         </span>
-        <span className='out-income'>
-          <span className='outcome'>Total expense: $0.00</span>
-          <span className='income'>Total income: $0.00</span>
+        <span className='outcome' style={{ marginRight: 8 }}>
+          Total expense: $0.00
         </span>
+        <span className='income'>Total income: $0.00</span>
       </DateWrapper>
     </Wrapper>
   );
