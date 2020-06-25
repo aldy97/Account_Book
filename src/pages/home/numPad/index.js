@@ -96,6 +96,61 @@ function NumberPad(props) {
     }
   `;
 
+  const CategoryItem = styled.li`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  `;
+
+  // 灰色圆形
+  const Category = styled.span`
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    border-radius: 50%;
+  `;
+
+  const CategoryText = styled.span`
+    font-size: 0.8em;
+    margin-top: 8px;
+    color: ${theme.$smallTextSize};
+    word-break: keep-all;
+  `;
+
+  const ExpenseList = [
+    'Clothing',
+    'Groceries',
+    'Diner',
+    'Investment',
+    'Commuting',
+    'Social',
+    'Communication',
+    'Medical',
+    'Pets',
+    'Cars',
+    'Entertainment',
+    'Office',
+    'Maintainance',
+    'Sports',
+    'Housing',
+    'Donation',
+    'Fruits',
+    'Wine',
+    'Travel',
+    'Gifts',
+    'Books',
+  ];
+
+  const IncomeList = ['Salary', 'Investment', 'Cash Gift', 'Part time'];
+
+  const list = expenseButtonSelected ? ExpenseList : IncomeList;
+
   return (
     <StyledNumberPad>
       <CloseBar
@@ -128,7 +183,17 @@ function NumberPad(props) {
         <span>$</span>
         <div></div>
       </AmountSection>
-      <CategoryList>catgory</CategoryList>
+      {/* 显示支出/收入类型区块*/}
+      <CategoryList>
+        {list.map((item, index) => {
+          return (
+            <CategoryItem key={index}>
+              <Category></Category>
+              <CategoryText>{item}</CategoryText>
+            </CategoryItem>
+          );
+        })}
+      </CategoryList>
       <button>1</button>
       <button>2</button>
       <button>3</button>
