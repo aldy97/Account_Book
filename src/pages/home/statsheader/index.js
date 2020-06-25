@@ -11,9 +11,6 @@ function StatesHeader(props) {
       font-size: ${theme.$smallTextSize};
       color: #fff;
     }
-    .date {
-      margin-right: 8px;
-    }
   `;
 
   return (
@@ -27,16 +24,20 @@ function StatesHeader(props) {
       </ButtonWrapper>
 
       <DateWrapper>
-        <span className='date' onClick={props.handleSetShowMonth}>
+        <span
+          className='date'
+          onClick={props.handleSetShowMonth}
+          style={{ marginRight: 12, cursor: 'pointer' }}
+        >
           {moment().format('MMMM YYYY')}
           <i className='iconfont' name='arrow-down' style={{ marginLeft: 4 }}>
             &#xe668;
           </i>
         </span>
         <span className='outcome' style={{ marginRight: 8 }}>
-          Total expense: $0.00
+          Expense: $0.00
         </span>
-        <span className='income'>Total income: $0.00</span>
+        <span className='income'> Income: $0.00</span>
       </DateWrapper>
     </Wrapper>
   );
