@@ -31,7 +31,7 @@ function NumberPad(props) {
         height: 192px;
         float: right;
         font-size: 1.3em;
-        color: black;
+        color: #fff;
       }
     }
     @media (max-width: 500px) {

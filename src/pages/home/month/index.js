@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import dayjs, { Dayjs } from 'dayjs';
 import { TypeWrapper, CloseBar, Item, ItemWrapper } from '../type/style';
 import theme from '../../../static/theme/index';
 
@@ -14,9 +15,22 @@ function SelectMonth(props) {
     line-height: 30px;
   `;
 
+  const thisYear = dayjs();
+
   const ItemMonth = styled(Item)`
     line-height: ${theme.$barHeight};
   `;
+
+  const getPrevMonths = () => {
+    const DURATION = thisYear.month() + 1;
+
+    return [...Array(DURATION)].map((_, index) =>
+      dayjs().subtract(index, 'month')
+    );
+  };
+
+  const prevMonths = getPrevMonths();
+  const thisYearMonths = prevMonths.filter((m) => m.isSame(thisYear, 'year'));
 
   return (
     <Wrapper>
@@ -26,14 +40,11 @@ function SelectMonth(props) {
         </i>
         <div>Choose Month</div>
       </CloseBar>
-      <Year style={{ marginTop: 60 }}>2020</Year>
+      <Year style={{ marginTop: 60 }}>{thisYear.get('year')}</Year>
       <ItemWrapper>
-        <ItemMonth>Jan</ItemMonth>
-        <ItemMonth>Feb</ItemMonth>
-        <ItemMonth>Mar</ItemMonth>
-        <ItemMonth>Apr</ItemMonth>
-        <ItemMonth>May</ItemMonth>
-        <ItemMonth>June</ItemMonth>
+        {thisYearMonths.map((m) => (
+          <ItemMonth>{m.get('month') + 1}</ItemMonth>
+        ))}
       </ItemWrapper>
     </Wrapper>
   );

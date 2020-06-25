@@ -10,6 +10,9 @@ function Central() {
     top: 200px;
     bottom: 72px;
     overflow-x: hidden;
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
   `;
 
   return (
