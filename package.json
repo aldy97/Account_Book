@@ -10,6 +10,7 @@
     "immutable": "^4.0.0-rc.12",
     "moment": "^2.27.0",
     "react": "^16.13.1",
+    "react-animated-css": "^1.2.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",

@@ -10,14 +10,26 @@ export const TypeWrapper = styled.div`
   box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
   top: 100;
   background: ${theme.$white};
+  .in-out {
+    overflow: hidden;
+    margin-top: ${theme.$barHeight};
+  }
   @media (max-width: 500px) {
     width: calc(100vw);
+    bottom: 0;
+    .in-out {
+      margin-top: 0;
+    }
   }
 `;
 
 export const CloseBar = styled.div`
   height: ${theme.$barHeight};
+  width: 476px;
+  background: #fff;
   border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
   i {
     font-size: 30px;
     color: #666;
@@ -33,6 +45,10 @@ export const CloseBar = styled.div`
     height: ${theme.$barHeight};
     margin-left: calc(10.5vw);
   }
+  @media (max-width: 500px) {
+    width: calc(100vw);
+    position: static;
+  }
 `;
 
 export const OutCome = styled.div`
@@ -47,20 +63,30 @@ export const OutCome = styled.div`
 export const InCome = styled(OutCome)``;
 
 export const ItemWrapper = styled.div`
+  width: ${theme.$width};
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 500px) {
+    width: calc(100vw);
+  }
 `;
 
 export const Item = styled.div`
   width: 133px;
-  background: #eee;
   height: ${theme.$barHeight};
+  float: left;
+  background: #eee;
   border: 1px solid black;
   border-radius: 5px;
   margin: ${theme.$dropDownMargin};
   text-align: center;
+  white-space: nowrap;
   cursor: pointer;
+  @media (max-width: 500px) {
+  }
   i {
     height: 20px;
     display: block;

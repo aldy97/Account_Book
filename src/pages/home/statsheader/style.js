@@ -52,4 +52,15 @@ export const DateWrapper = styled.div`
       margin-right: 6px;
     }
   }
+  @media (max-width: 500px) {
+    .date {
+      margin-right: 8px;
+      margin-left: 0;
+      flex: 1;
+    }
+    .out-income {
+      margin-right: 0;
+      flex: 3;
+    }
+  }
 `;

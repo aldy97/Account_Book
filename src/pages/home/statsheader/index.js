@@ -18,7 +18,7 @@ function StatesHeader(props) {
           </i>
         </span>
         <span className='out-income'>
-          <span className='outcome'>Total outcome: $0.00</span>
+          <span className='outcome'>Total expense: $0.00</span>
           <span className='income'>Total income: $0.00</span>
         </span>
       </DateWrapper>

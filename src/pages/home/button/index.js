@@ -13,8 +13,8 @@ function Button(props) {
     border-radius: 50%;
     text-align: center;
     position: fixed;
-    bottom: 92px;
-    margin-left: 410px;
+    bottom: 100px;
+    margin-left: 28px;
     z-index: 10;
     i {
       font-size: 30px;
