@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
 import { TypeWrapper, CloseBar, Item, ItemWrapper } from '../type/style';
 import theme from '../../../static/theme/index';
 
