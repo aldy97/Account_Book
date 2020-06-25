@@ -26,7 +26,7 @@ function SelectMonth(props) {
         </i>
         <div>Choose Month</div>
       </CloseBar>
-      <Year>2020</Year>
+      <Year style={{ marginTop: 60 }}>2020</Year>
       <ItemWrapper>
         <ItemMonth>Jan</ItemMonth>
         <ItemMonth>Feb</ItemMonth>

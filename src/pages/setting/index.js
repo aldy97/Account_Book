@@ -34,7 +34,9 @@ function Setting() {
         Contact me
       </Item>
       <Item>
-        <i className='iconfont'>&#xe781;</i>
+        <i className='iconfont' style={{ fontWeight: 800 }}>
+          &#xe781;
+        </i>
         General Settings
       </Item>
     </div>

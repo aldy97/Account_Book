@@ -5,10 +5,10 @@ export const TypeWrapper = styled.div`
   height: calc(100vh);
   overflow: scroll;
   position: fixed;
+  top: 100;
   z-index: 20;
   border: 1px solid #eee;
   box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
-  top: 100;
   background: ${theme.$white};
   .in-out {
     overflow: hidden;
@@ -25,8 +25,8 @@ export const TypeWrapper = styled.div`
 
 export const CloseBar = styled.div`
   height: ${theme.$barHeight};
-  width: 476px;
-  background: #fff;
+  width: ${theme.$width};
+  background: #eee;
   border-bottom: 1px solid #eee;
   position: fixed;
   top: 0;
@@ -43,7 +43,7 @@ export const CloseBar = styled.div`
   div {
     display: inline-block;
     height: ${theme.$barHeight};
-    margin-left: calc(10.5vw);
+    margin-left: calc(150px);
   }
   @media (max-width: 500px) {
     width: calc(100vw);

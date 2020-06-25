@@ -10,6 +10,7 @@ function NumberPad(props) {
     position: fixed;
     bottom: 0;
     z-index: 20;
+    background: #fff;
     button {
       cursor: pointer;
       float: left;
@@ -25,14 +26,13 @@ function NumberPad(props) {
         color: #000;
       }
       &.OK {
+        background: ${theme.$blue};
+        opacity: 0.6;
         height: 192px;
         float: right;
         font-size: 1.3em;
         color: black;
       }
-    }
-    button: hover {
-      border: 4px solid ${theme.$blue};
     }
     @media (max-width: 500px) {
       width: calc(100vw);

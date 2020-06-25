@@ -4,6 +4,7 @@ import theme from '../../static/theme/index';
 export const Item = styled.div`
   width: ${theme.$width};
   height: ${theme.$barHeight};
+  background: #eee;
   line-height: ${theme.$barHeight};
   border: 1px solid black;
   border-radius: 7px;
