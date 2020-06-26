@@ -7,4 +7,5 @@ body {
   margin-right: auto;
   font-family: futura;
   overflow-x: hidden;
+  overflow-y: hidden;
 }

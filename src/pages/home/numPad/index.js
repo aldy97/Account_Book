@@ -153,11 +153,12 @@ function NumberPad(props) {
 
   return (
     <StyledNumberPad>
-      <CloseBar
-        style={{ border: '1px solid #eee', position: 'static' }}
-        onClick={props.handleSetShowNumPad}
-      >
-        <i className='iconfont' style={{ marginLeft: 12 }}>
+      <CloseBar style={{ border: '1px solid #eee', position: 'static' }}>
+        <i
+          className='iconfont'
+          style={{ marginLeft: 12 }}
+          onClick={props.handleSetShowNumPad}
+        >
           &#xe687;
         </i>
       </CloseBar>

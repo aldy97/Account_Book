@@ -40,7 +40,7 @@ function SelectMonth(props) {
         </i>
         <div>Choose Month</div>
       </CloseBar>
-      <Year style={{ marginTop: 60 }}>{thisYear.get('year')}</Year>
+      <Year style={{ marginTop: 20 }}>{thisYear.get('year')}</Year>
       <ItemWrapper>
         {thisYearMonths.map((m) => (
           <ItemMonth>{m.get('month') + 1}</ItemMonth>

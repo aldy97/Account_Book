@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 
 function Button(props) {
-  const ButtonWrapper = styled.div`
+  const ButtonWrapper = styled.button`
     width: 50px;
     height: 50px;
     cursor: pointer;

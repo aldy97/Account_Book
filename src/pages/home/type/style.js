@@ -72,7 +72,7 @@ export const ItemWrapper = styled.div`
   }
 `;
 
-export const Item = styled.div`
+export const Item = styled.button`
   width: 25%;
   height: ${theme.$barHeight};
   background: #eee;
