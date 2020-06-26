@@ -188,7 +188,9 @@ function NumberPad(props) {
         {list.map((item, index) => {
           return (
             <CategoryItem key={index}>
-              <Category></Category>
+              <Category>
+                <i className='iconfont'>&#xe646;</i>
+              </Category>
               <CategoryText>{item}</CategoryText>
             </CategoryItem>
           );

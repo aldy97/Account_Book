@@ -43,7 +43,7 @@ export const CloseBar = styled.div`
   div {
     display: inline-block;
     height: ${theme.$barHeight};
-    margin-left: calc(150px);
+    margin-left: 25%;
   }
   @media (max-width: 500px) {
     width: calc(100vw);
@@ -53,8 +53,8 @@ export const CloseBar = styled.div`
 
 export const OutCome = styled.div`
   .title {
-    margin-left: ${theme.$dropDownMargin};
-    margin-top: 8px;
+    margin-left: 3.8%;
+    margin-top: 3.8%;
     font-size: ${theme.$middleTextSize};
     color: ${theme.$blue};
   }
@@ -63,30 +63,24 @@ export const OutCome = styled.div`
 export const InCome = styled(OutCome)``;
 
 export const ItemWrapper = styled.div`
+  background: #fff;
   width: ${theme.$width};
   display: flex;
-  flex-flow: row wrap;
-  align-content: flex-start;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
   @media (max-width: 500px) {
     width: calc(100vw);
   }
 `;
 
 export const Item = styled.div`
-  width: 133px;
+  width: 25%;
   height: ${theme.$barHeight};
-  float: left;
   background: #eee;
   border: 1px solid black;
   border-radius: 5px;
-  margin: ${theme.$dropDownMargin};
+  margin: 3.8%;
   text-align: center;
-  white-space: nowrap;
   cursor: pointer;
-  @media (max-width: 500px) {
-  }
   i {
     height: 20px;
     display: block;

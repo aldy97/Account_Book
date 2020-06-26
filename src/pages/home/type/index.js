@@ -46,7 +46,7 @@ function Type(props) {
             </Item>
             <Item>
               <i className='iconfont 饮料'>&#xe647;</i>
-              <div className='text'>Communication</div>
+              <div className='text'>Mobile</div>
             </Item>
             <Item>
               <i className='iconfont 饮料'>&#xe64d;</i>
