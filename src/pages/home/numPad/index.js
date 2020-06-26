@@ -188,7 +188,7 @@ function NumberPad(props) {
       <CategoryList>
         {list.map((item, index) => {
           return (
-            <CategoryItem key={index}>
+            <CategoryItem key={index} style={{ cursor: 'pointer' }}>
               <Category>
                 <i className='iconfont'>&#xe646;</i>
               </Category>

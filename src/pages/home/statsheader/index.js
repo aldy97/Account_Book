@@ -1,18 +1,8 @@
 import React from 'react';
-import { Wrapper, ButtonWrapper } from './style';
+import { Wrapper, ButtonWrapper, DateWrapper } from './style';
 import moment from 'moment';
-import theme from '../../../static/theme/index';
-import styled from 'styled-components';
 
 function StatesHeader(props) {
-  const DateWrapper = styled.div`
-    padding: 18px 18px;
-    span {
-      font-size: ${theme.$smallTextSize};
-      color: #fff;
-    }
-  `;
-
   return (
     <Wrapper>
       <ButtonWrapper

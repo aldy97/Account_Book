@@ -72,11 +72,11 @@ export const ItemWrapper = styled.div`
   }
 `;
 
-export const Item = styled.button`
+export const Item = styled.div`
   width: 25%;
   height: ${theme.$barHeight};
   background: #eee;
-  border: 1px solid black;
+  border: 1px solid #eee;
   border-radius: 5px;
   margin: 3.8%;
   text-align: center;

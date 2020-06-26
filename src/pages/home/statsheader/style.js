@@ -31,36 +31,9 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const DateWrapper = styled.div`
-  height: 45px;
-  margin-top: 8px;
-  margin-left: ${theme.$marginLeft};
-  line-height: 45px;
-  display: flex;
-  .date {
-    flex: 1;
-    cursor: pointer;
-    margin-left: 15px;
-    font-size: ${theme.$middleTextSize};
-    i {
-      margin-left: 4px;
-    }
-  }
-  .out-income {
-    flex: 2;
+  padding: 18px 18px;
+  span {
     font-size: ${theme.$smallTextSize};
-    .outcome {
-      margin-right: 6px;
-    }
-  }
-  @media (max-width: 500px) {
-    .date {
-      margin-right: 8px;
-      margin-left: 0;
-      flex: 1;
-    }
-    .out-income {
-      margin-right: 0;
-      flex: 3;
-    }
+    color: #fff;
   }
 `;

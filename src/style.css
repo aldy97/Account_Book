@@ -1,11 +1,9 @@
 html,
 body {
   width: 480px;
-  height: calc(100vh);
   margin: 0;
   margin-left: auto;
   margin-right: auto;
   font-family: futura;
   overflow-x: hidden;
-  overflow-y: hidden;
 }

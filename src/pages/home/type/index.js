@@ -62,7 +62,7 @@ function Type(props) {
             </Item>
             <Item>
               <i className='iconfont 饮料'>&#xe620;</i>
-              <div className='text'>Entertainment</div>
+              <div className='text'>Entmt</div>
             </Item>
             <Item>
               <i className='iconfont 饮料'>&#xe604;</i>
