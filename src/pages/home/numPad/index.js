@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import theme from '../../../static/theme/index';
 import styled from 'styled-components';
 import { CloseBar } from '../type/style';
+import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function NumberPad(props) {
   const [expenseButtonSelected, setExpenseButtonSelected] = useState(true);
@@ -122,37 +123,6 @@ function NumberPad(props) {
     color: ${theme.$smallTextSize};
     word-break: keep-all;
   `;
-
-  const ExpenseList = [
-    ['Clothing', 'icon-yifu'],
-    ['Groceries', 'icon-caigou'],
-    ['Diner', 'icon-canyin'],
-    ['Investment', 'icon-gupiao'],
-    ['Commuting', 'icon-jiaotong'],
-    ['Social', 'icon-shejiao'],
-    ['Phone', 'icon-tongxun'],
-    ['Medical', 'icon-yiliao'],
-    ['Pets', 'icon-chongwu'],
-    ['Cars', 'icon-qiche'],
-    ['Ettmt', 'icon-yule'],
-    ['Office', 'icon-bangong'],
-    ['Fix', 'icon-weixiu'],
-    ['Sports', 'icon-yundong'],
-    ['Housing', 'icon-zhufang'],
-    ['Donation', 'icon-aixinjuanzeng'],
-    ['Fruits', 'icon-yingtao'],
-    ['Wine', 'icon-yanjiu'],
-    ['Travel', 'icon-huaban'],
-    ['Gifts', 'icon-liwu'],
-    ['Books', 'icon-icon_huabanfuben'],
-  ];
-
-  const IncomeList = [
-    ['Salary', 'icon-gongzi'],
-    ['Investment', 'icon-gupiao'],
-    ['Cash Gift', 'icon-red-packet_icon'],
-    ['Part time', 'icon-jianzhi'],
-  ];
 
   const list = expenseButtonSelected ? ExpenseList : IncomeList;
 
