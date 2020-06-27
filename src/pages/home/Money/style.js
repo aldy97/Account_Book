@@ -81,7 +81,7 @@ export const AmountSection = styled.section`
   }
 `;
 
-export const CategoryList = styled.ul`
+export const StyledCategoryList = styled.ul`
   padding: 24px;
   display: flex;
   align-items: center;
@@ -100,6 +100,11 @@ export const CategoryItem = styled.li`
   cursor: pointer;
   &:last-child {
     margin-right: 0;
+  }
+  i {
+    .selected {
+      color: red;
+    }
   }
 `;
 

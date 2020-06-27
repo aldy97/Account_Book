@@ -1,26 +1,15 @@
 import React, { useState } from 'react';
 import theme from '../../../static/theme';
+import CategoryList from '../categoryList/index';
 import NumPad from '../numPad/index';
-import {
-  StyledMoney,
-  TypeSection,
-  Button,
-  AmountSection,
-  CategoryList,
-  CategoryItem,
-  Category,
-  CategoryText,
-} from './style';
+import { StyledMoney, TypeSection, Button, AmountSection } from './style';
 import { CloseBar } from '../type/style';
-import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function Money(props) {
   const [amount, setAmount] = useState(0);
   const [amountString, setAmountString] = useState(amount.toString());
   const [itemId, setItemId] = useState(-1);
-
   const [expenseButtonSelected, setExpenseButtonSelected] = useState(true);
-  const list = expenseButtonSelected ? ExpenseList : IncomeList;
 
   const onChangeAmount = (newValue) => {
     setAmountString(newValue);
@@ -29,6 +18,10 @@ function Money(props) {
 
   const onOK = () => {
     if (amount === 0) return alert('Input can not be 0');
+  };
+
+  const handleClick = (id) => {
+    setItemId(id);
   };
 
   return (
@@ -60,28 +53,16 @@ function Money(props) {
           Income
         </Button>
       </TypeSection>
+      <CategoryList
+        expenseButtonSelected={expenseButtonSelected}
+        itemId={itemId}
+        handleClick={handleClick}
+      />
       <AmountSection>
         <span>$</span>
         <div>{amountString}</div>
       </AmountSection>
       {/* 显示支出/收入类型区块*/}
-      <CategoryList>
-        {list.map((item) => {
-          return (
-            <CategoryItem key={item.id} onClick={() => setItemId(item.id)}>
-              <Category>
-                <i
-                  className={`iconfont ${item.icon}`}
-                  style={{
-                    color: `${item.id === itemId ? theme.$blue : 'null'}`,
-                  }}
-                ></i>
-              </Category>
-              <CategoryText>{item.name}</CategoryText>
-            </CategoryItem>
-          );
-        })}
-      </CategoryList>
       <NumPad value={amountString} onChange={onChangeAmount} onOK={onOK} />
     </StyledMoney>
   );

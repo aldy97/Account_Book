@@ -4,11 +4,12 @@ import theme from '../../../static/theme';
 
 function Central() {
   const StyledCentral = styled.div`
-    height: 100px;
+    height: 1000px;
     width: ${theme.$width};
     z-index: 0;
     margin-top: 200px;
-    background: #eee;
+    background: #fff;
+    overflow-y: scroll;
     @media (max-width: 500px) {
       width: calc(100vw);
     }
