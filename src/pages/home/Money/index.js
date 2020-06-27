@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import theme from '../../../static/theme';
 import NumPad from '../numPad/index';
 import {
   StyledMoney,
@@ -16,7 +17,7 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 function Money(props) {
   const [amount, setAmount] = useState(0);
   const [amountString, setAmountString] = useState(amount.toString());
-  // const [selectedItem, setSelectedItem] = useState(-1);
+  const [itemId, setItemId] = useState(-1);
 
   const [expenseButtonSelected, setExpenseButtonSelected] = useState(true);
   const list = expenseButtonSelected ? ExpenseList : IncomeList;
@@ -67,9 +68,14 @@ function Money(props) {
       <CategoryList>
         {list.map((item) => {
           return (
-            <CategoryItem key={item.id}>
+            <CategoryItem key={item.id} onClick={() => setItemId(item.id)}>
               <Category>
-                <i className={`iconfont ${item.icon}`}></i>
+                <i
+                  className={`iconfont ${item.icon}`}
+                  style={{
+                    color: `${item.id === itemId ? theme.$blue : 'null'}`,
+                  }}
+                ></i>
               </Category>
               <CategoryText>{item.name}</CategoryText>
             </CategoryItem>
