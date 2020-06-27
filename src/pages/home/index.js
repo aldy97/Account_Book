@@ -12,7 +12,7 @@ function Home() {
   //是否显示选择月份区块
   const [showMonth, setShowMonth] = useState(false);
   //是否显示记账盘
-  const [showMoney, setShowMoney] = useState(true);
+  const [showMoney, setShowMoney] = useState(false);
 
   const showType = (show) => {
     if (show) {

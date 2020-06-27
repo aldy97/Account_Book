@@ -4,7 +4,7 @@ import theme from '../../../static/theme';
 
 function Central() {
   const StyledCentral = styled.div`
-    height: 1000px;
+    height: 100px;
     width: ${theme.$width};
     z-index: 0;
     margin-top: 200px;

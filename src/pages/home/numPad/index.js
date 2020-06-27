@@ -58,7 +58,7 @@ function NumPad(props) {
     const newValue = prevValue + text;
 
     if (parseFloat(newValue) > MAX_AMOUNT) {
-      alert(`输入金额不能超过${MAX_AMOUNT}`);
+      alert(`Input can not be higher than ${MAX_AMOUNT}`);
       return prevValue;
     }
 

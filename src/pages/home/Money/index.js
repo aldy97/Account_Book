@@ -16,6 +16,7 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 function Money(props) {
   const [amount, setAmount] = useState(0);
   const [amountString, setAmountString] = useState(amount.toString());
+  const [selectedItem, setSelectedItem] = useState(-1);
 
   const [expenseButtonSelected, setExpenseButtonSelected] = useState(true);
   const list = expenseButtonSelected ? ExpenseList : IncomeList;
@@ -26,7 +27,7 @@ function Money(props) {
   };
 
   const onOK = () => {
-    if (amount === 0) return alert('金额不能为0');
+    if (amount === 0) return alert('Input can not be 0');
   };
 
   return (
@@ -64,13 +65,13 @@ function Money(props) {
       </AmountSection>
       {/* 显示支出/收入类型区块*/}
       <CategoryList>
-        {list.map((item, index) => {
+        {list.map((item) => {
           return (
-            <CategoryItem key={index} style={{ cursor: 'pointer' }}>
+            <CategoryItem key={item.id}>
               <Category>
-                <i className={`iconfont ${item[1]}`}></i>
+                <i className={`iconfont ${item.icon}`}></i>
               </Category>
-              <CategoryText>{item[0]}</CategoryText>
+              <CategoryText>{item.name}</CategoryText>
             </CategoryItem>
           );
         })}

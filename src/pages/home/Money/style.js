@@ -97,6 +97,7 @@ export const CategoryItem = styled.li`
   flex-direction: column;
   align-items: center;
   margin-right: 16px;
+  cursor: pointer;
   &:last-child {
     margin-right: 0;
   }

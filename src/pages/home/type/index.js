@@ -23,9 +23,9 @@ function Type(props) {
           <ItemWrapper>
             {ExpenseList.map((item) => {
               return (
-                <Item>
-                  <i className={`iconfont ${item[1]}`}></i>
-                  <div className='text'>{item[0]}</div>
+                <Item key={item.id}>
+                  <i className={`iconfont ${item.icon}`}></i>
+                  <div className='text'>{item.name}</div>
                 </Item>
               );
             })}
@@ -36,9 +36,9 @@ function Type(props) {
           <ItemWrapper>
             {IncomeList.map((item) => {
               return (
-                <Item>
-                  <i className={`iconfont ${item[1]}`}></i>
-                  <div className='text'>{item[0]}</div>
+                <Item key={item.id}>
+                  <i className={`iconfont ${item.icon}`}></i>
+                  <div className='text'>{item.name}</div>
                 </Item>
               );
             })}
