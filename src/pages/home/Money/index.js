@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import theme from '../../../static/theme';
 import CategoryList from '../categoryList/index';
 import NumPad from '../numPad/index';
 import { StyledMoney, TypeSection, Button, AmountSection } from './style';
