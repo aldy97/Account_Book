@@ -8,7 +8,6 @@ function SelectMonth(props) {
   const Wrapper = styled(TypeWrapper)``;
 
   const Year = styled.div`
-    height: 30px;
     text-align: center;
     margin-top: ${theme.$dropDownMargin};
     color: #666;
@@ -38,9 +37,8 @@ function SelectMonth(props) {
         <i className='iconfont' onClick={props.handleSetShowMonth}>
           &#xe687;
         </i>
-        <div>Choose Month</div>
       </CloseBar>
-      <Year style={{ marginTop: 20 }}>{thisYear.get('year')}</Year>
+      <Year style={{ marginTop: 60 }}>{thisYear.get('year')}</Year>
       <ItemWrapper>
         {thisYearMonths.map((m) => (
           <ItemMonth>{m.get('month') + 1}</ItemMonth>

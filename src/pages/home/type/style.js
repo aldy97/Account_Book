@@ -2,13 +2,12 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
   width: 478px;
-  height: calc(100vh);
+  height: 300px;
   overflow: scroll;
   position: fixed;
-  top: 100;
+  top: 400px;
   z-index: 20;
   border: 1px solid #eee;
-  box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
   background: ${theme.$white};
   .in-out {
     overflow: hidden;
@@ -29,7 +28,7 @@ export const CloseBar = styled.div`
   background: #eee;
   border-bottom: 1px solid #eee;
   position: fixed;
-  top: 0;
+  top: 100;
   i {
     font-size: 30px;
     color: #666;
@@ -79,6 +78,7 @@ export const Item = styled.div`
   border: 1px solid #fff;
   border-radius: 5px;
   margin: 3.8%;
+  margin-bottom: 0;
   text-align: center;
   cursor: pointer;
   i {

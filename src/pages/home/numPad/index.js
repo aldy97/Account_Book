@@ -117,8 +117,8 @@ function NumberPad(props) {
   `;
 
   const CategoryText = styled.span`
-    font-size: 0.8em;
-    margin-top: 8px;
+    font-size: 0.6em;
+    margin-top: 9px;
     color: ${theme.$smallTextSize};
     word-break: keep-all;
   `;

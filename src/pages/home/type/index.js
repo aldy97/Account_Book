@@ -106,7 +106,7 @@ function Type(props) {
             </Item>
           </ItemWrapper>
         </OutCome>
-        <InCome>
+        <InCome style={{ marginBottom: '25px' }}>
           <div className='title'>Income</div>
           <ItemWrapper>
             <Item>
