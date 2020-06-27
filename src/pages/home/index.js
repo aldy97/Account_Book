@@ -4,7 +4,7 @@ import Type from './type/index';
 import SelectMonth from './month/index';
 import Central from './central/index';
 import Button from './button/index';
-import NumPad from './numPad/index';
+import NumPad from './Money/index';
 
 function Home() {
   //是否显示类型区块
@@ -12,7 +12,7 @@ function Home() {
   //是否显示选择月份区块
   const [showMonth, setShowMonth] = useState(false);
   //是否显示记账盘
-  const [showNumPad, setShowNumPad] = useState(false);
+  const [showMoney, setShowMoney] = useState(true);
 
   const showType = (show) => {
     if (show) {
@@ -35,17 +35,17 @@ function Home() {
   const handleSetShow = () => {
     setShow(!show);
     setShowMonth(false);
-    setShowNumPad(false);
+    setShowMoney(false);
   };
 
   const handleSetShowMonth = () => {
     setShowMonth(!showMonth);
     setShow(false);
-    setShowNumPad(false);
+    setShowMoney(false);
   };
 
   const handleSetShowNumPad = () => {
-    setShowNumPad(!showNumPad);
+    setShowMoney(!showMoney);
     setShowMonth(false);
     setShow(false);
   };
@@ -58,7 +58,7 @@ function Home() {
       />
       {showType(show)}
       {showSelectedMonth(showMonth)}
-      {showDrawer(showNumPad)}
+      {showDrawer(showMoney)}
       <Button handleSetShowNumPad={handleSetShowNumPad} />
       <Central />
     </div>

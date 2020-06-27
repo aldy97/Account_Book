@@ -15,10 +15,6 @@ export const TypeWrapper = styled.div`
   }
   @media (max-width: 500px) {
     width: calc(100vw);
-    bottom: 0;
-    .in-out {
-      margin-top: 0;
-    }
   }
 `;
 
