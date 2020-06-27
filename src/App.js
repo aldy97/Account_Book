@@ -7,8 +7,6 @@ import Stat from './pages/stat/index';
 import Setting from './pages/setting/index';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { GlobalStyle } from './style';
-import { GlobalStyleFont } from './static/iconfont/iconfont';
 
 function App() {
   return (
@@ -22,8 +20,6 @@ function App() {
         </div>
       </BrowserRouter>
       <Footer />
-      <GlobalStyle />
-      <GlobalStyleFont />
     </Provider>
   );
 }

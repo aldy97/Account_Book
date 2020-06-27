@@ -76,7 +76,7 @@ export const Item = styled.div`
   width: 25%;
   height: ${theme.$barHeight};
   background: #eee;
-  border: 1px solid #eee;
+  border: 1px solid #fff;
   border-radius: 5px;
   margin: 3.8%;
   text-align: center;

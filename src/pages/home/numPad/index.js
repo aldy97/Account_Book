@@ -124,30 +124,35 @@ function NumberPad(props) {
   `;
 
   const ExpenseList = [
-    'Clothing',
-    'Groceries',
-    'Diner',
-    'Investment',
-    'Commuting',
-    'Social',
-    'Communication',
-    'Medical',
-    'Pets',
-    'Cars',
-    'Entertainment',
-    'Office',
-    'Maintainance',
-    'Sports',
-    'Housing',
-    'Donation',
-    'Fruits',
-    'Wine',
-    'Travel',
-    'Gifts',
-    'Books',
+    ['Clothing', 'icon-yifu'],
+    ['Groceries', 'icon-caigou'],
+    ['Diner', 'icon-canyin'],
+    ['Investment', 'icon-gupiao'],
+    ['Commuting', 'icon-jiaotong'],
+    ['Social', 'icon-shejiao'],
+    ['Phone', 'icon-tongxun'],
+    ['Medical', 'icon-yiliao'],
+    ['Pets', 'icon-chongwu'],
+    ['Cars', 'icon-qiche'],
+    ['Ettmt', 'icon-yule'],
+    ['Office', 'icon-bangong'],
+    ['Fix', 'icon-weixiu'],
+    ['Sports', 'icon-yundong'],
+    ['Housing', 'icon-zhufang'],
+    ['Donation', 'icon-aixinjuanzeng'],
+    ['Fruits', 'icon-yingtao'],
+    ['Wine', 'icon-yanjiu'],
+    ['Travel', 'icon-huaban'],
+    ['Gifts', 'icon-liwu'],
+    ['Books', 'icon-icon_huabanfuben'],
   ];
 
-  const IncomeList = ['Salary', 'Investment', 'Cash Gift', 'Part time'];
+  const IncomeList = [
+    ['Salary', 'icon-gongzi'],
+    ['Investment', 'icon-gupiao'],
+    ['Cash Gift', 'icon-red-packet_icon'],
+    ['Part time', 'icon-jianzhi'],
+  ];
 
   const list = expenseButtonSelected ? ExpenseList : IncomeList;
 
@@ -190,9 +195,9 @@ function NumberPad(props) {
           return (
             <CategoryItem key={index} style={{ cursor: 'pointer' }}>
               <Category>
-                <i className='iconfont'>&#xe646;</i>
+                <i className={`iconfont ${item[1]}`}></i>
               </Category>
-              <CategoryText>{item}</CategoryText>
+              <CategoryText>{item[0]}</CategoryText>
             </CategoryItem>
           );
         })}
