@@ -23,8 +23,8 @@ export const ExpenseList = [
 ];
 
 export const IncomeList = [
-  { name: 'Salary', icon: 'icon-gongzi', id: 0 },
-  { name: 'Investment', icon: 'icon-gupiao', id: 1 },
-  { name: 'Cash Gift', icon: 'icon-red-packet_icon', id: 2 },
-  { name: 'Part time', icon: 'icon-jianzhi', id: 3 },
+  { name: 'Salary', icon: 'icon-gongzi', id: 21 },
+  { name: 'Investment', icon: 'icon-gupiao', id: 22 },
+  { name: 'Cash Gift', icon: 'icon-red-packet_icon', id: 23 },
+  { name: 'Part time', icon: 'icon-jianzhi', id: 24 },
 ];

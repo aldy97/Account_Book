@@ -10,26 +10,22 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function CategoryList(props) {
   const list = props.expenseButtonSelected ? ExpenseList : IncomeList;
+  const itemID = props.itemId;
   return (
     <StyledCategoryList>
-      {list.map((item) => {
-        return (
-          <CategoryItem
-            key={item.id}
-            onClick={() => props.handleClick(item.id)}
-          >
-            <Category>
-              <i
-                className={`iconfont ${item.icon}`}
-                style={{
-                  color: `${item.id === props.itemId ? theme.$blue : 'null'}`,
-                }}
-              />
-            </Category>
-            <CategoryText>{item.name}</CategoryText>
-          </CategoryItem>
-        );
-      })}
+      {list.map((item) => (
+        <CategoryItem key={item.id} onClick={() => props.handleClick(item.id)}>
+          <Category>
+            <i
+              className={`iconfont ${item.icon}`}
+              style={{
+                color: `${item.id === itemID ? theme.$blue : '#000'}`,
+              }}
+            />
+          </Category>
+          <CategoryText>{item.name}</CategoryText>
+        </CategoryItem>
+      ))}
     </StyledCategoryList>
   );
 }
