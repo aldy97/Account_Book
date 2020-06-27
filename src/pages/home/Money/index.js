@@ -16,7 +16,7 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 function Money(props) {
   const [amount, setAmount] = useState(0);
   const [amountString, setAmountString] = useState(amount.toString());
-  const [selectedItem, setSelectedItem] = useState(-1);
+  // const [selectedItem, setSelectedItem] = useState(-1);
 
   const [expenseButtonSelected, setExpenseButtonSelected] = useState(true);
   const list = expenseButtonSelected ? ExpenseList : IncomeList;
