@@ -14,9 +14,20 @@ import { CloseBar } from '../type/style';
 import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function Money(props) {
-  const value = '0';
+  const [amount, setAmount] = useState(0);
+  const [amountString, setAmountString] = useState(amount.toString());
+
   const [expenseButtonSelected, setExpenseButtonSelected] = useState(true);
   const list = expenseButtonSelected ? ExpenseList : IncomeList;
+
+  const onChangeAmount = (newValue) => {
+    setAmountString(newValue);
+    setAmount(parseFloat(newValue));
+  };
+
+  const onOK = () => {
+    if (amount === 0) return alert('金额不能为0');
+  };
 
   return (
     <StyledMoney>
@@ -49,7 +60,7 @@ function Money(props) {
       </TypeSection>
       <AmountSection>
         <span>$</span>
-        <div>{value}</div>
+        <div>{amountString}</div>
       </AmountSection>
       {/* 显示支出/收入类型区块*/}
       <CategoryList>
@@ -64,7 +75,7 @@ function Money(props) {
           );
         })}
       </CategoryList>
-      <NumPad value={value} />
+      <NumPad value={amountString} onChange={onChangeAmount} onOK={onOK} />
     </StyledMoney>
   );
 }

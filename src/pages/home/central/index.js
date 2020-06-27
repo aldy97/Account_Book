@@ -3,23 +3,13 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 
 function Central() {
-  const CentralWrapper = styled.div`
-    width: ${theme.$width};
-    overflow: scroll;
-    z-index: 8;
-    top: 200px;
-    bottom: 72px;
-    overflow-x: hidden;
-    @media (max-width: 500px) {
-      width: calc(100vw);
-    }
+  const StyledCentral = styled.div`
+    z-index: 0;
+    margin-top: 200px;
+    height: 1000px;
+    background: #eee;
   `;
-
-  return (
-    <CentralWrapper>
-      <div>Hello World</div>
-    </CentralWrapper>
-  );
+  return <StyledCentral>Hello World</StyledCentral>;
 }
 
 export default Central;
