@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 export const TypeWrapper = styled.div`
   width: 478px;
-  height: 300px;
+  height: calc(75vh);
   overflow: scroll;
   position: fixed;
-  top: 400px;
+  top: 200px;
   z-index: 20;
   border: 1px solid #eee;
   background: ${theme.$white};
@@ -28,7 +28,6 @@ export const CloseBar = styled.div`
   background: #eee;
   border-bottom: 1px solid #eee;
   position: fixed;
-  top: 100;
   i {
     font-size: 30px;
     color: #666;
@@ -46,7 +45,6 @@ export const CloseBar = styled.div`
   }
   @media (max-width: 500px) {
     width: calc(100vw);
-    position: static;
   }
 `;
 
