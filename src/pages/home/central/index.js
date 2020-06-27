@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '../../../static/theme/index';
 
 function Central() {
   const StyledCentral = styled.div`
