@@ -1,7 +1,8 @@
 import React from 'react';
+import SingleRecord from './SingleRecord';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
-import { DEFAULT_RECORDS } from './record';
+import { DEFAULT_RECORDS } from './Record';
 
 //首页的中间部分：记录支出/收入详情
 function Central() {
@@ -31,49 +32,20 @@ function Central() {
     }
   `;
 
-  const Specification = styled.div`
-    height: ${theme.$barHeight};
-    background: #fff;
-    line-height: ${theme.$barHeight};
-    font-size: 1em;
-    margin-left: 8px;
-    border-bottom: 1px solid #eee;
-    @media (max-width: 500px) {
-      width: calc(100vw);
-    }
+  const DailyWrapper = styled.div`
+    border-bottom: 1px solid #666;
   `;
 
   return (
     <StyledCentral>
       {DEFAULT_RECORDS.map((item) => {
         return (
-          <div key={item.id} style={{ borderBottom: '1px solid #000' }}>
+          <DailyWrapper key={item.id}>
             <SectionHeader>{item.date}</SectionHeader>
             {item.recordList.map((record) => {
-              return (
-                <Specification>
-                  <i
-                    className={`iconfont ${record.categoryIcon}`}
-                    style={{
-                      fontWeight: 500,
-                      marginRight: `${theme.$marginLeft}`,
-                      color: `${theme.$blue}`,
-                    }}
-                  />
-                  <span>{record.category}</span>
-                  <span
-                    style={{
-                      float: 'right',
-                      marginRight: `${theme.$marginLeft}`,
-                    }}
-                  >
-                    {record.type === 'expense' ? '-' : ''}
-                    <span style={{ marginLeft: 4 }}>{record.amount}</span>
-                  </span>
-                </Specification>
-              );
+              return <SingleRecord record={record}></SingleRecord>;
             })}
-          </div>
+          </DailyWrapper>
         );
       })}
     </StyledCentral>

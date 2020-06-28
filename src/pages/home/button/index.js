@@ -18,16 +18,13 @@ function Button(props) {
     margin-left: 28px;
     z-index: 10;
     i {
-      font-size: 30px;
-      line-height: 50px;
+      font-size: 25px;
       color: ${theme.$blue};
     }
   `;
   return (
     <ButtonWrapper onClick={props.handleSetShowNumPad}>
-      <i className='iconfont' name='记账'>
-        &#xe612;
-      </i>
+      <i className='iconfont icon-jiluziliaoguanli' />
     </ButtonWrapper>
   );
 }
