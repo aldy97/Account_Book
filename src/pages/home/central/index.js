@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
 import { DEFAULT_RECORDS } from './record';
-import { Category } from '../Money/style';
 
 //首页的中间部分：记录支出/收入详情
 function Central() {
