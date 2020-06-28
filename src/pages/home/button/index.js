@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 
+//首页的悬浮按钮
 function Button(props) {
   const ButtonWrapper = styled.button`
     width: 50px;

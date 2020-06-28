@@ -10,7 +10,6 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function CategoryList(props) {
   const list = props.expenseButtonSelected ? ExpenseList : IncomeList;
-  const itemID = props.itemId;
   return (
     <StyledCategoryList>
       {list.map((item) => (
@@ -19,7 +18,7 @@ function CategoryList(props) {
             <i
               className={`iconfont ${item.icon}`}
               style={{
-                color: `${item.id === itemID ? theme.$blue : '#000'}`,
+                color: `${item.id === props.itemId ? theme.$blue : '#000'}`,
               }}
             />
           </Category>

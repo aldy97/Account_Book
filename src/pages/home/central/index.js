@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
 
+//首页的中间部分：记录支出/收入详情
 function Central() {
   const StyledCentral = styled.div`
     height: 1000px;

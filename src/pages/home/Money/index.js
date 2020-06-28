@@ -4,6 +4,7 @@ import NumPad from '../numPad/index';
 import { StyledMoney, TypeSection, Button, AmountSection } from './style';
 import { CloseBar } from '../type/style';
 
+//点击悬浮按钮之后弹出的界面：包含类型/项目以及数目选择
 function Money(props) {
   const [amount, setAmount] = useState(0);
   const [amountString, setAmountString] = useState(amount.toString());
