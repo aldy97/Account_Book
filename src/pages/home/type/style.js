@@ -28,8 +28,8 @@ export const CloseBar = styled.div`
     font-size: 30px;
     color: #666;
     line-height: ${theme.$barHeight};
-    margin-left: 6px;
     cursor: pointer;
+    margin-left: ${theme.$marginLeft};
   }
   i: hover {
     color: #000;

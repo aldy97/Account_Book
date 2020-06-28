@@ -13,10 +13,10 @@ function Central() {
     margin-right: auto;
     background: #fff;
     overflow-y: scroll;
-    overflow-x: hidden;
     @media (max-width: 500px) {
       width: calc(98vw);
       float: left;
+      overflow-x: hidden;
     }
   `;
   const SectionHeader = styled.div`

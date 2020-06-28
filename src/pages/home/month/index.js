@@ -34,7 +34,11 @@ function SelectMonth(props) {
   return (
     <Wrapper>
       <CloseBar>
-        <i className='iconfont' onClick={props.handleSetShowMonth}>
+        <i
+          className='iconfont'
+          onClick={props.handleSetShowMonth}
+          style={{ marginLeft: `${theme.$marginLeft}` }}
+        >
           &#xe687;
         </i>
       </CloseBar>

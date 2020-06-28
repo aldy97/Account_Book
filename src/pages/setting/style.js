@@ -6,9 +6,8 @@ export const Item = styled.div`
   height: ${theme.$barHeight};
   background: #eee;
   line-height: ${theme.$barHeight};
-  border: 1px solid black;
-  border-radius: 7px;
-  margin-top: 8px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
   cursor: pointer;
   @media (max-width: 500px) {
     width: calc(100vw);
