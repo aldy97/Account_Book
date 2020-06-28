@@ -6,17 +6,17 @@ import { DEFAULT_RECORDS } from './record';
 //首页的中间部分：记录支出/收入详情
 function Central() {
   const StyledCentral = styled.div`
-    width: 480px;
+    width: ${theme.$width};
     z-index: 0;
     margin-top: 192px;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
+    overflow-x: hidden;
     overflow-y: scroll;
     @media (max-width: 500px) {
       width: calc(100vw);
-      margin-left: auto;
-      margin-right: auto;
+      float: left;
     }
   `;
   const SectionHeader = styled.div`
@@ -26,6 +26,9 @@ function Central() {
     line-height: ${theme.$barHeight};
     margin-left: 8px;
     color: #333;
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
   `;
 
   const Specification = styled.div`
@@ -35,6 +38,9 @@ function Central() {
     font-size: 1em;
     margin-left: 8px;
     border-bottom: 1px solid #eee;
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
   `;
 
   return (
