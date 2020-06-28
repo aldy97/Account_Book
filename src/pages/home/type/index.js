@@ -19,7 +19,7 @@ function Type(props) {
       </CloseBar>
       <div className='in-out'>
         <OutCome>
-          <div className='title'>Outcome</div>
+          <div className='title'>Expense</div>
           <ItemWrapper>
             {ExpenseList.map((item) => {
               return (

@@ -3,18 +3,21 @@ import { Item } from './style';
 
 function Setting() {
   return (
-    <div style={{ position: 'fixed', 'margin-top': '100px' }}>
+    <div
+      style={{
+        position: 'fixed',
+        marginTop: 88,
+      }}
+    >
       <Item>
         <i
-          className='iconfont'
+          className='iconfont icon-erweima'
           style={{
             'margin-right': '10px',
             'margin-left': '12px',
             'font-size': '25px',
           }}
-        >
-          &#xe701;
-        </i>
+        />
         Recommend this app to your friends
       </Item>
       <Item
@@ -22,7 +25,7 @@ function Setting() {
           (window.location.href = 'https://github.com/aldy97/Account_Book')
         }
       >
-        <i className='iconfont'>&#xe691;</i>
+        <i className='iconfont icon-github' />
         Support me by starring this app
       </Item>
       <Item
@@ -30,13 +33,11 @@ function Setting() {
           window.location.href = 'mailto:fengxiong34@gmail.com';
         }}
       >
-        <i className='iconfont'>&#xe6cb;</i>
+        <i className='iconfont icon-liaotian' />
         Contact me
       </Item>
       <Item>
-        <i className='iconfont' style={{ fontWeight: 800 }}>
-          &#xe781;
-        </i>
+        <i className='iconfont icon-shezhi' style={{ fontWeight: 800 }} />
         General Settings
       </Item>
     </div>

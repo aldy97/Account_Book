@@ -6,17 +6,17 @@ import { DEFAULT_RECORDS } from './record';
 //首页的中间部分：记录支出/收入详情
 function Central() {
   const StyledCentral = styled.div`
-    width: 470px;
+    width: 480px;
     z-index: 0;
-    margin-top: 200px;
+    margin-top: 192px;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
     overflow-y: scroll;
     @media (max-width: 500px) {
-      width: calc(98vw);
-      float: left;
-      overflow-x: hidden;
+      width: calc(100vw);
+      margin-left: auto;
+      margin-right: auto;
     }
   `;
   const SectionHeader = styled.div`
@@ -50,12 +50,17 @@ function Central() {
                     className={`iconfont ${record.categoryIcon}`}
                     style={{
                       fontWeight: 500,
-                      marginRight: 8,
+                      marginRight: `${theme.$marginLeft}`,
                       color: `${theme.$blue}`,
                     }}
                   />
                   <span>{record.category}</span>
-                  <span style={{ float: 'right' }}>
+                  <span
+                    style={{
+                      float: 'right',
+                      marginRight: `${theme.$marginLeft}`,
+                    }}
+                  >
                     {record.type === 'expense' ? '-' : ''}
                     <span style={{ marginLeft: 4 }}>{record.amount}</span>
                   </span>
