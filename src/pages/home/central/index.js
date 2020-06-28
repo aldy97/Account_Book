@@ -15,7 +15,8 @@ function Central() {
     overflow-y: scroll;
     overflow-x: hidden;
     @media (max-width: 500px) {
-      width: calc(100vw);
+      width: calc(98vw);
+      float: left;
     }
   `;
   const SectionHeader = styled.div`
@@ -33,6 +34,7 @@ function Central() {
     line-height: ${theme.$barHeight};
     font-size: 1em;
     margin-left: 8px;
+    border-bottom: 1px solid #eee;
   `;
 
   return (
@@ -41,21 +43,25 @@ function Central() {
         return (
           <div key={item.id} style={{ borderBottom: '1px solid #000' }}>
             <SectionHeader>{item.date}</SectionHeader>
-            <Specification>
-              <i
-                className={`iconfont ${item.categoryIcon}`}
-                style={{
-                  fontWeight: 500,
-                  marginRight: 8,
-                  color: `${theme.$blue}`,
-                }}
-              />
-              <span>{item.category}</span>
-              <span style={{ float: 'right' }}>
-                {item.type === 'expense' ? '-' : ''}
-                <span style={{ marginLeft: 4 }}>{item.amount}</span>
-              </span>
-            </Specification>
+            {item.recordList.map((record) => {
+              return (
+                <Specification>
+                  <i
+                    className={`iconfont ${record.categoryIcon}`}
+                    style={{
+                      fontWeight: 500,
+                      marginRight: 8,
+                      color: `${theme.$blue}`,
+                    }}
+                  />
+                  <span>{record.category}</span>
+                  <span style={{ float: 'right' }}>
+                    {record.type === 'expense' ? '-' : ''}
+                    <span style={{ marginLeft: 4 }}>{record.amount}</span>
+                  </span>
+                </Specification>
+              );
+            })}
           </div>
         );
       })}
