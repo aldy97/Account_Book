@@ -86,4 +86,7 @@ export const Item = styled.div`
     font-size: ${theme.$smallTextSize};
     margin-top: 16px;
   }
+  &: hover {
+    border: 1px solid ${theme.$blue};
+  }
 `;

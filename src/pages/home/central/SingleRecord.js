@@ -15,6 +15,9 @@ function SingleRecord(props) {
     @media (max-width: 500px) {
       width: calc(100vw);
     }
+    &: hover {
+      background: #eee;
+    }
   `;
 
   const record = props.record;

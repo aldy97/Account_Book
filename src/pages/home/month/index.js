@@ -20,6 +20,10 @@ function SelectMonth(props) {
     line-height: ${theme.$barHeight};
   `;
 
+  const ChooseMonth = styled.span`
+    margin-left: 29%;
+  `;
+
   const getPrevMonths = () => {
     const DURATION = thisYear.month() + 1;
 
@@ -35,12 +39,11 @@ function SelectMonth(props) {
     <Wrapper>
       <CloseBar>
         <i
-          className='iconfont'
+          className='iconfont icon-cha'
           onClick={props.handleSetShowMonth}
           style={{ marginLeft: `${theme.$marginLeft}` }}
-        >
-          &#xe687;
-        </i>
+        />
+        <ChooseMonth>Choose Month</ChooseMonth>
       </CloseBar>
       <Year style={{ marginTop: 60 }}>{thisYear.get('year')}</Year>
       <ItemWrapper>
