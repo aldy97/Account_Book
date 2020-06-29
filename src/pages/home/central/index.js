@@ -11,9 +11,6 @@ function Central() {
     margin-bottom: ${theme.$footerHeight};
     margin-top: 192px;
     background: #fff;
-    @media (max-width: 500px) {
-      width: calc(100vw);
-    }
   `;
 
   const DailyWrapper = styled.div`

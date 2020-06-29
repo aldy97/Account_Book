@@ -5,6 +5,7 @@ import SelectMonth from './month/index';
 import Central from './central/index';
 import Button from './button/index';
 import NumPad from './Money/index';
+import styled from 'styled-components';
 
 function Home() {
   //是否显示类型区块
@@ -50,8 +51,14 @@ function Home() {
     setShow(false);
   };
 
+  const StyledHome = styled.div`
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
+  `;
+
   return (
-    <div>
+    <StyledHome>
       <StateHeader
         handleSetShow={handleSetShow}
         handleSetShowMonth={handleSetShowMonth}
@@ -61,7 +68,7 @@ function Home() {
       {showDrawer(showMoney)}
       <Button handleSetShowNumPad={handleSetShowNumPad} />
       <Central />
-    </div>
+    </StyledHome>
   );
 }
 
