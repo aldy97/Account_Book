@@ -5,4 +5,7 @@ body {
   margin-right: auto;
   font-family: futura;
   overflow-x: hidden;
+  @media (max-width: 500px;) {
+    width: calc(100vw);
+  }
 }
