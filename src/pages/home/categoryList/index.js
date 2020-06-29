@@ -5,7 +5,7 @@ import {
   CategoryItem,
   Category,
   CategoryText,
-} from '../Money/style';
+} from './style';
 import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function CategoryList(props) {
