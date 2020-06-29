@@ -1,7 +1,7 @@
 export const ExpenseList = [
   { name: 'Clothing', icon: 'icon-yifu', id: 0 },
   { name: 'Groceries', icon: 'icon-caigou', id: 1 },
-  { name: 'Diner', icon: 'icon-canyin', id: 2 },
+  { name: 'Diner', icon: 'icon-daochacanyin', id: 2 },
   { name: 'Investment', icon: 'icon-gupiao', id: 3 },
   { name: 'Commuting', icon: 'icon-jiaotong', id: 4 },
   { name: 'Social', icon: 'icon-shejiao', id: 5 },

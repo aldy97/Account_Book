@@ -9,16 +9,15 @@ function Central() {
   const StyledCentral = styled.div`
     width: ${theme.$width};
     z-index: 0;
-    margin-top: 192px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: ${theme.$footerHeight};
+    margin-top: 200px;
     background: #fff;
     overflow-x: hidden;
     overflow-y: scroll;
-    @media (max-width: 500px) {
-      width: calc(100vw);
-      float: left;
-    }
+    // @media (max-width: 500px) {
+    //   width: calc(100vw);
+    //   float: left;
+    // }
   `;
 
   const DailyWrapper = styled.div`
@@ -33,9 +32,9 @@ function Central() {
     margin-left: ${theme.$marginLeft};
     color: #333;
     font-size: ${theme.$smallTextSize};
-    @media (max-width: 500px) {
-      width: calc(100vw);
-    }
+    // @media (max-width: 500px) {
+    //   width: calc(100vw);
+    // }
   `;
 
   return (

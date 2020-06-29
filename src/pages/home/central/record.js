@@ -7,7 +7,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 0,
         category: 'Diner',
-        categoryIcon: 'icon-canyin',
+        categoryIcon: 'icon-daochacanyin',
         amount: 300,
         type: 'expense',
       },
@@ -33,7 +33,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 3,
         category: 'Diner',
-        categoryIcon: 'icon-canyin',
+        categoryIcon: 'icon-daochacanyin',
         amount: 300,
         type: 'expense',
       },
