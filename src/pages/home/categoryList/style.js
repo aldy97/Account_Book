@@ -8,7 +8,6 @@ export const StyledCategoryList = styled.ul`
   align-items: center;
   overflow-x: auto;
   list-style: none;
-  border: 1px solid black;
   &::-webkit-scrollbar {
     width: 0;
   }
