@@ -14,10 +14,9 @@ function Central() {
     background: #fff;
     overflow-x: hidden;
     overflow-y: scroll;
-    // @media (max-width: 500px) {
-    //   width: calc(100vw);
-    //   float: left;
-    // }
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
   `;
 
   const DailyWrapper = styled.div`
@@ -32,9 +31,6 @@ function Central() {
     margin-left: ${theme.$marginLeft};
     color: #333;
     font-size: ${theme.$smallTextSize};
-    // @media (max-width: 500px) {
-    //   width: calc(100vw);
-    // }
   `;
 
   return (
