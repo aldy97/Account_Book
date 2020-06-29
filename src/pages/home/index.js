@@ -55,6 +55,7 @@ function Home() {
     @media (max-width: 500px) {
       width: calc(100vw);
     }
+    backgound: yellow;
   `;
 
   return (
