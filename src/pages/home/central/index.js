@@ -30,7 +30,7 @@ function Central() {
     height: ${theme.$barHeight};
     border-bottom: 1px solid #eee;
     line-height: ${theme.$barHeight};
-    margin-left: 8px;
+    margin-left: ${theme.$marginLeft};
     color: #333;
     font-size: ${theme.$smallTextSize};
     @media (max-width: 500px) {

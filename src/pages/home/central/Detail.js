@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../static/theme/index';
 import { CloseBar } from '../type/style';
+import { Category } from '../categoryList/style';
 
 //点击单笔记录SingleRecord后弹出的详情
 function Detail(props) {
@@ -55,6 +56,14 @@ function Detail(props) {
     }
   `;
 
+  const IconWrapper = styled(Category)`
+    width: 10px;
+    height: 10px;
+    background: ${theme.$blue};
+    margin-right: 6px;
+    margin-left: ${theme.$marginLeft};
+  `;
+
   const record = props.record;
 
   return (
@@ -65,7 +74,18 @@ function Detail(props) {
 
       <DetailSection>
         <Header>
-          <i className={`iconfont ${record.categoryIcon}`} /> {record.category}
+          <IconWrapper>
+            <i
+              className={`iconfont ${record.categoryIcon}`}
+              style={{
+                fontWeight: 500,
+                marginLeft: `${theme.$marginLeft}`,
+                marginRight: `${theme.$marginLeft}`,
+                color: '#fff',
+              }}
+            />
+          </IconWrapper>
+          {record.category}
         </Header>
         <Amount>
           {record.type === 'expense' ? '-' : '+'} {record.amount}
