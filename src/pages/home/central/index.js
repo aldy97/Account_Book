@@ -20,6 +20,11 @@ function Central() {
       float: left;
     }
   `;
+
+  const DailyWrapper = styled.div`
+    border-bottom: 1px solid #666;
+  `;
+
   const SectionHeader = styled.div`
     background: #fff;
     height: ${theme.$barHeight};
@@ -27,13 +32,10 @@ function Central() {
     line-height: ${theme.$barHeight};
     margin-left: 8px;
     color: #333;
+    font-size: ${theme.$smallTextSize};
     @media (max-width: 500px) {
       width: calc(100vw);
     }
-  `;
-
-  const DailyWrapper = styled.div`
-    border-bottom: 1px solid #666;
   `;
 
   return (

@@ -9,6 +9,7 @@ function SingleRecord(props) {
     background: #fff;
     line-height: ${theme.$barHeight};
     font-size: 1em;
+    font-weight: 100;
     margin-left: 8px;
     border-bottom: 1px solid #eee;
     cursor: pointer;

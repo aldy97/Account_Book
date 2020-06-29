@@ -120,6 +120,7 @@ export const Category = styled.span`
 
 export const CategoryText = styled.span`
   font-size: 0.6em;
+  font-weight: 300;
   margin-top: 9px;
   color: ${theme.$smallTextSize};
   word-break: keep-all;

@@ -14,11 +14,15 @@ function CategoryList(props) {
     <StyledCategoryList>
       {list.map((item) => (
         <CategoryItem key={item.id} onClick={() => props.handleClick(item.id)}>
-          <Category>
+          <Category
+            style={{
+              background: `${item.id === props.itemId ? theme.$blue : ''}`,
+            }}
+          >
             <i
               className={`iconfont ${item.icon}`}
               style={{
-                color: `${item.id === props.itemId ? theme.$blue : '#000'}`,
+                color: `${item.id === props.itemId ? '#fff' : '#333'}`,
               }}
             />
           </Category>
