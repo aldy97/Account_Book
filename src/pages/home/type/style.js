@@ -22,7 +22,6 @@ export const CloseBar = styled.div`
   height: ${theme.$barHeight};
   width: ${theme.$width};
   background: #eee;
-  border-bottom: 1px solid #eee;
   position: fixed;
   i {
     font-size: 30px;

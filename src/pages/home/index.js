@@ -55,7 +55,6 @@ function Home() {
     @media (max-width: 500px) {
       width: calc(100vw);
     }
-    background: yellow;
   `;
 
   return (
