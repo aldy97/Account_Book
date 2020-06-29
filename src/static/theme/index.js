@@ -1,5 +1,6 @@
 const theme = {
   $blue: '#0084ff',
+  $backgroundGrey: '',
   $white: '#fff',
   $width: '480px',
   $largeTextSize: '25px',

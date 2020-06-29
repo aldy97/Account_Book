@@ -7,13 +7,10 @@ import { DEFAULT_RECORDS } from './record';
 //首页的中间部分：记录支出/收入详情
 function Central() {
   const StyledCentral = styled.div`
-    width: ${theme.$width};
     z-index: 0;
     margin-bottom: ${theme.$footerHeight};
-    margin-top: 200px;
+    margin-top: 192px;
     background: #fff;
-    overflow-x: hidden;
-    overflow-y: scroll;
     @media (max-width: 500px) {
       width: calc(100vw);
     }
