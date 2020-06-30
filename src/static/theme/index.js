@@ -1,5 +1,6 @@
 const theme = {
   $blue: '#0084ff',
+  $orange: '#f6b906',
   $backgroundGrey: '',
   $white: '#fff',
   $width: '480px',

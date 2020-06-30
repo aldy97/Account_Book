@@ -63,7 +63,12 @@ function Money(props) {
         <div>{amountString}</div>
       </AmountSection>
       {/* 显示支出/收入类型区块*/}
-      <NumPad value={amountString} onChange={onChangeAmount} onOK={onOK} />
+      <NumPad
+        value={amountString}
+        onChange={onChangeAmount}
+        onOK={onOK}
+        type={expenseButtonSelected}
+      />
     </StyledMoney>
   );
 }

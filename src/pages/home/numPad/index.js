@@ -22,7 +22,7 @@ function NumPad(props) {
       font-size: 1em;
       color: white;
       opacity: ${props.value === '0' ? 0.6 : 1};
-      background: ${theme.$blue}
+      background: ${props.type ? theme.$blue : theme.$orange};
   }
 `;
   const { value, onOK, onChange } = props;

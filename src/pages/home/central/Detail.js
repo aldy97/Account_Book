@@ -74,7 +74,13 @@ function Detail(props) {
 
       <DetailSection>
         <Header>
-          <IconWrapper>
+          <IconWrapper
+            style={{
+              background: `${
+                record.type === 'expense' ? theme.$blue : theme.$orange
+              }`,
+            }}
+          >
             <i
               className={`iconfont ${record.categoryIcon}`}
               style={{
@@ -91,7 +97,7 @@ function Detail(props) {
           {record.type === 'expense' ? '-' : '+'} {record.amount}
         </Amount>
         <Bottom>
-          <span style={{ color: 'red' }}>
+          <span style={{ color: 'red', borderRight: '1px solid #eee' }}>
             <i className='iconfont icon-shanchu'></i>
             Delete
           </span>

@@ -21,7 +21,6 @@ function SingleRecord(props) {
   const IconWrapper = styled(Category)`
     width: 10px;
     height: 10px;
-    background: ${theme.$blue};
     margin-right: 6px;
     margin-left: ${theme.$marginLeft};
   `;
@@ -42,7 +41,13 @@ function SingleRecord(props) {
   return (
     <div>
       <Specification onClick={() => setShowDetail(true)}>
-        <IconWrapper>
+        <IconWrapper
+          style={{
+            background: `${
+              record.type === 'expense' ? theme.$blue : theme.$orange
+            }`,
+          }}
+        >
           <i
             className={`iconfont ${record.categoryIcon}`}
             style={{
