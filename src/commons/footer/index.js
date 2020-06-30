@@ -8,7 +8,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <div
-        className={keyword == '' ? 'navItem isSelected' : 'navItem'}
+        className={keyword === '' ? 'navItem isSelected' : 'navItem'}
         onClick={() => {
           window.location.href = '/';
         }}
@@ -18,7 +18,7 @@ function Footer() {
       </div>
 
       <div
-        className={keyword == 'statistics' ? 'navItem isSelected' : 'navItem'}
+        className={keyword === 'statistics' ? 'navItem isSelected' : 'navItem'}
         onClick={() => {
           window.location.href = '/statistics';
         }}
@@ -28,7 +28,7 @@ function Footer() {
       </div>
 
       <div
-        className={keyword == 'setting' ? 'navItem isSelected' : 'navItem'}
+        className={keyword === 'setting' ? 'navItem isSelected' : 'navItem'}
         onClick={() => {
           window.location.href = '/setting';
         }}
