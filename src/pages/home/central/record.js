@@ -46,4 +46,30 @@ export const DEFAULT_RECORDS = [
       },
     ],
   },
+  {
+    date: dayjs('2020-03-04').toString(),
+    recordList: [
+      {
+        id: 0,
+        category: 'Diner',
+        categoryIcon: 'icon-daochacanyin',
+        amount: 300,
+        type: 'expense',
+      },
+      {
+        id: 1,
+        category: 'Salery',
+        categoryIcon: 'icon-gongzi',
+        amount: 400,
+        type: 'income',
+      },
+      {
+        id: 2,
+        category: 'Sports',
+        categoryIcon: 'icon-yundong',
+        amount: 200,
+        type: 'expense',
+      },
+    ],
+  },
 ];

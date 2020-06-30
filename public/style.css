@@ -6,8 +6,4 @@ body {
   font-family: futura;
   overflow: hidden;
   overflow-y: auto;
-  -ms-overflow-style: none;
-}
-body::-webkit-scrollbar {
-  display: none;
 }

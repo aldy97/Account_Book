@@ -11,7 +11,7 @@ function Detail(props) {
     height: calc(100vh);
     position: fixed;
     z-index: 12;
-    top: 0;
+    top: 192px;
     background: #eee;
     @media (max-width: 500px) {
       width: calc(100vw);
