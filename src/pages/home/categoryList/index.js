@@ -10,13 +10,15 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 
 function CategoryList(props) {
   const list = props.expenseButtonSelected ? ExpenseList : IncomeList;
+  const color = props.expenseButtonSelected ? theme.$blue : theme.$orange;
+
   return (
     <StyledCategoryList>
       {list.map((item) => (
         <CategoryItem key={item.id} onClick={() => props.handleClick(item.id)}>
           <Category
             style={{
-              background: `${item.id === props.itemId ? theme.$blue : ''}`,
+              background: `${item.id === props.itemId ? color : ''}`,
             }}
           >
             <i

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CategoryList from '../categoryList/index';
+import theme from '../../../static/theme/index';
 import NumPad from '../numPad/index';
 import { StyledMoney, TypeSection, Button, AmountSection } from './style';
 import { CloseBar } from '../type/style';
@@ -37,7 +38,8 @@ function Money(props) {
       </CloseBar>
       <TypeSection>
         <Button
-          className={expenseButtonSelected ? 'selected' : null}
+          className={expenseButtonSelected ? 'selected' : ''}
+          style={{ background: `${theme.$blue}` }}
           onClick={() => {
             setExpenseButtonSelected(!expenseButtonSelected);
           }}
@@ -45,7 +47,8 @@ function Money(props) {
           Expense
         </Button>
         <Button
-          className={expenseButtonSelected ? null : 'selected'}
+          className={expenseButtonSelected ? '' : 'selected'}
+          style={{ background: `${theme.$orange}` }}
           onClick={() => {
             setExpenseButtonSelected(!expenseButtonSelected);
           }}
@@ -57,6 +60,7 @@ function Money(props) {
         expenseButtonSelected={expenseButtonSelected}
         itemId={itemId}
         handleClick={handleClick}
+        type={expenseButtonSelected}
       />
       <AmountSection>
         <span>$</span>

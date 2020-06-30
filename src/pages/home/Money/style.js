@@ -50,7 +50,6 @@ export const Button = styled.div`
     border: 1px solid;
     border-radius: 16px;
     margin-right: 10px;
-    background: ${theme.$blue};
     color: #fff;
     text-align: center;
     line-height: 30px;
