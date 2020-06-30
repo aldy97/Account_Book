@@ -7,9 +7,13 @@ import { DEFAULT_RECORDS } from './record';
 //首页的中间部分：记录支出/收入详情
 function Central() {
   const StyledCentral = styled.div`
+    top: 200px;
+    bottom: ${theme.$footerHeight};
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: ${theme.$width};
     z-index: 0;
-    margin-bottom: ${theme.$footerHeight};
-    margin-top: 192px;
     background: #fff;
   `;
 

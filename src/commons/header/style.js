@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.div`
   width: ${theme.$width};
   height: 100px;
   position: fixed;
-  z-index: 10;
+  z-index: -1;
   top: 0;
   background: ${theme.$blue};
   color: rgb(237, 245, 237);
