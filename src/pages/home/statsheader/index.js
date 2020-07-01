@@ -1,25 +1,17 @@
 import React from 'react';
-import { Wrapper, ButtonWrapper, DateWrapper } from './style';
-import moment from 'moment';
+import { Wrapper, TypeFilter, MonthFilter } from './style';
 
+//过滤器（类型选择 + 月份选择），支出/收入
 function StatesHeader(props) {
   return (
     <Wrapper>
-      <ButtonWrapper
-        onClick={props.handleSetShow}
-        style={{ cursor: 'pointer' }}
-      >
+      <TypeFilter onClick={props.handleSetShow}>
         <div>{props.stateTitle}</div>
         <i className={`iconfont ${props.stateIcon}`}></i>
-      </ButtonWrapper>
-
-      <DateWrapper>
-        <span
-          className='date'
-          onClick={props.handleSetShowMonth}
-          style={{ marginRight: 12, cursor: 'pointer' }}
-        >
-          {moment().format('MMMM YYYY')}
+      </TypeFilter>
+      <MonthFilter>
+        <span className='date' onClick={props.handleSetShowMonth}>
+          {props.month.format('MMMM YYYY')}
           <i className='iconfont' name='arrow-down' style={{ marginLeft: 4 }}>
             &#xe668;
           </i>
@@ -28,7 +20,7 @@ function StatesHeader(props) {
           Expense: $0.00
         </span>
         <span className='income'> Income: $0.00</span>
-      </DateWrapper>
+      </MonthFilter>
     </Wrapper>
   );
 }

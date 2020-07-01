@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import theme from '../../../static/theme/index';
 import { TypeWrapper, CloseBar, Item, ItemWrapper } from '../type/style';
 import { Shadow } from '../type/style';
-import theme from '../../../static/theme/index';
 
 function SelectMonth(props) {
   const Wrapper = styled(TypeWrapper)``;
@@ -21,9 +21,10 @@ function SelectMonth(props) {
     line-height: ${theme.$barHeight};
   `;
 
-  const ChooseMonth = styled.span`
-    margin-left: 29%;
-  `;
+  const submit = (newMonth) => {
+    props.onSubmit(newMonth);
+    props.handleSetShowMonth();
+  };
 
   const getPrevMonths = () => {
     const DURATION = thisYear.month() + 1;
@@ -37,7 +38,7 @@ function SelectMonth(props) {
   const thisYearMonths = prevMonths.filter((m) => m.isSame(thisYear, 'year'));
 
   return (
-    <Shadow>
+    <Shadow onClick={props.handleSetShowMonth}>
       <Wrapper>
         <CloseBar>
           <i
@@ -45,12 +46,17 @@ function SelectMonth(props) {
             onClick={props.handleSetShowMonth}
             style={{ marginLeft: `${theme.$marginLeft}` }}
           />
-          <ChooseMonth>Choose Month</ChooseMonth>
         </CloseBar>
         <Year style={{ marginTop: 60 }}>{thisYear.get('year')}</Year>
         <ItemWrapper>
           {thisYearMonths.map((m) => (
-            <ItemMonth>{m.get('month') + 1}</ItemMonth>
+            <ItemMonth
+              key={m.get('month')}
+              onClick={() => submit(m)}
+              style={{ background: `${props.month === m ? theme.$blue : ''}` }}
+            >
+              {m.get('month') + 1}
+            </ItemMonth>
           ))}
         </ItemWrapper>
       </Wrapper>

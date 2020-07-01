@@ -6,12 +6,16 @@ import Central from './central/index';
 import Button from './button/index';
 import Money from './Money/index';
 import styled from 'styled-components';
+import dayjs from 'dayjs';
 
 function Home() {
+  //当前被选择的过滤类型以及图标
   const [stateTitle, setStateTitle] = useState('All Types');
   const [stateIcon, setStateIcon] = useState('icon-type');
+  //当前被选择的月份
+  const [month, setMonth] = useState(dayjs());
 
-  //是否显示类型区块
+  //是否显示过滤器类型区块
   const [show, setShow] = useState(false);
   //是否显示选择月份区块
   const [showMonth, setShowMonth] = useState(false);
@@ -23,6 +27,7 @@ function Home() {
       return (
         <Type
           handleSetShow={handleSetShow}
+          stateTitle={stateTitle}
           setStateTitle={setStateTitle}
           setStateIcon={setStateIcon}
         />
@@ -32,7 +37,14 @@ function Home() {
 
   const showSelectedMonth = (show) => {
     if (show) {
-      return <SelectMonth handleSetShowMonth={handleSetShowMonth} />;
+      return (
+        <SelectMonth
+          handleSetShowMonth={handleSetShowMonth}
+          month={month}
+          setMonth={setMonth}
+          onSubmit={(newMonth) => setMonth(newMonth)}
+        />
+      );
     }
   };
 
@@ -73,6 +85,7 @@ function Home() {
         handleSetShowMonth={handleSetShowMonth}
         stateTitle={stateTitle}
         stateIcon={stateIcon}
+        month={month}
       />
       {showType(show)}
       {showSelectedMonth(showMonth)}

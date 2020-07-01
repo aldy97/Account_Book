@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import theme from '../../../static/theme/index';
 import { ExpenseList, IncomeList } from '../../../static/itemList';
 import {
   TypeWrapper,
@@ -20,8 +21,10 @@ function Type(props) {
 
   const AllType = styled(OutCome)``;
 
+  const StyledItem = styled(Item)``;
+
   return (
-    <Shadow>
+    <Shadow onClick={props.handleSetShow}>
       <TypeWrapper>
         <CloseBar>
           <i className='iconfont' onClick={props.handleSetShow}>
@@ -30,13 +33,25 @@ function Type(props) {
         </CloseBar>
         <div className='in-out'>
           <AllType>
-            <ItemWrapper
-              onClick={() => handleClickItem('All Types', 'icon-type')}
-            >
-              <Item>
-                <i className={`iconfont icon-type`}></i>
-                <div className='text'>All Types</div>
-              </Item>
+            <ItemWrapper>
+              <StyledItem
+                stateTitle={props.stateTitle}
+                onClick={() => handleClickItem('All Types', 'icon-type')}
+                style={{
+                  background: `${
+                    props.stateTitle === 'All Types' ? theme.$blue : ''
+                  }`,
+                }}
+              >
+                <div
+                  style={{
+                    color: `${props.stateTitle === 'All Types' ? '#fff' : ''}`,
+                  }}
+                >
+                  <i className={`iconfont icon-type`}></i>
+                  <div className='text'>All Types</div>
+                </div>
+              </StyledItem>
             </ItemWrapper>
           </AllType>
           <OutCome>
@@ -44,13 +59,26 @@ function Type(props) {
             <ItemWrapper>
               {ExpenseList.map((item) => {
                 return (
-                  <Item
+                  <StyledItem
                     key={item.id}
                     onClick={() => handleClickItem(item.name, item.icon)}
+                    style={{
+                      background: `${
+                        props.stateTitle === item.name ? theme.$blue : ''
+                      }`,
+                    }}
                   >
-                    <i className={`iconfont ${item.icon}`}></i>
-                    <div className='text'>{item.name}</div>
-                  </Item>
+                    <div
+                      style={{
+                        color: `${
+                          props.stateTitle === item.name ? '#fff' : ''
+                        }`,
+                      }}
+                    >
+                      <i className={`iconfont ${item.icon}`}></i>
+                      <div className='text'>{item.name}</div>
+                    </div>
+                  </StyledItem>
                 );
               })}
             </ItemWrapper>
@@ -60,13 +88,26 @@ function Type(props) {
             <ItemWrapper>
               {IncomeList.map((item) => {
                 return (
-                  <Item
+                  <StyledItem
                     key={item.id}
                     onClick={() => handleClickItem(item.name, item.icon)}
+                    style={{
+                      background: `${
+                        props.stateTitle === item.name ? theme.$blue : ''
+                      }`,
+                    }}
                   >
-                    <i className={`iconfont ${item.icon}`}></i>
-                    <div className='text'>{item.name}</div>
-                  </Item>
+                    <div
+                      style={{
+                        color: `${
+                          props.stateTitle === item.name ? '#fff' : ''
+                        }`,
+                      }}
+                    >
+                      <i className={`iconfont ${item.icon}`}></i>
+                      <div className='text'>{item.name}</div>
+                    </div>
+                  </StyledItem>
                 );
               })}
             </ItemWrapper>

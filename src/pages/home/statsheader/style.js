@@ -7,7 +7,7 @@ export const Wrapper = styled(HeaderWrapper)`
   top: 100px;
 `;
 
-export const ButtonWrapper = styled.div`
+export const TypeFilter = styled.div`
   width: ${theme.$buttonWidth};
   height: ${theme.$buttonHeight};
   border: 2px solid #fff;
@@ -30,10 +30,13 @@ export const ButtonWrapper = styled.div`
   }
 `;
 
-export const DateWrapper = styled.div`
+export const MonthFilter = styled.div`
   padding: 18px 18px;
+  cursor: pointer;
+  display: flex;
   span {
     font-size: ${theme.$smallTextSize};
     color: #fff;
+    flex: 1;
   }
 `;
