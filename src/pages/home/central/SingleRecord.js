@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Category } from '../categoryList/style';
 import Detail from './Detail';
 import styled from 'styled-components';
