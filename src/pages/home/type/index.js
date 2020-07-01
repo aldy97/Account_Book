@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { ExpenseList, IncomeList } from '../../../static/itemList';
 import {
   TypeWrapper,
@@ -17,6 +18,8 @@ function Type(props) {
     props.handleSetShow();
   };
 
+  const AllType = styled(OutCome)``;
+
   return (
     <Shadow>
       <TypeWrapper>
@@ -26,6 +29,16 @@ function Type(props) {
           </i>
         </CloseBar>
         <div className='in-out'>
+          <AllType>
+            <ItemWrapper
+              onClick={() => handleClickItem('All Types', 'icon-type')}
+            >
+              <Item>
+                <i className={`iconfont icon-type`}></i>
+                <div className='text'>All Types</div>
+              </Item>
+            </ItemWrapper>
+          </AllType>
           <OutCome>
             <div className='title'>Expense</div>
             <ItemWrapper>
@@ -47,7 +60,10 @@ function Type(props) {
             <ItemWrapper>
               {IncomeList.map((item) => {
                 return (
-                  <Item key={item.id}>
+                  <Item
+                    key={item.id}
+                    onClick={() => handleClickItem(item.name, item.icon)}
+                  >
                     <i className={`iconfont ${item.icon}`}></i>
                     <div className='text'>{item.name}</div>
                   </Item>

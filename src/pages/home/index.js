@@ -4,7 +4,7 @@ import Type from './type/index';
 import SelectMonth from './month/index';
 import Central from './central/index';
 import Button from './button/index';
-import NumPad from './Money/index';
+import Money from './Money/index';
 import styled from 'styled-components';
 
 function Home() {
@@ -38,7 +38,7 @@ function Home() {
 
   const showDrawer = (show) => {
     if (show) {
-      return <NumPad handleSetShowNumPad={handleSetShowNumPad} />;
+      return <Money handleSetShowNumPad={handleSetShowNumPad} />;
     }
   };
 
