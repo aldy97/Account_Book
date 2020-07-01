@@ -95,6 +95,6 @@ export const Shadow = styled.div`
   height: 100%;
   width: 100%;
   bottom: 0;
-  z-index: 4;
+  z-index: 12;
   background: rgba(0, 0, 0, 0.5);
 `;

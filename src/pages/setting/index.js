@@ -1,4 +1,5 @@
 import React from 'react';
+import theme from '../../static/theme/index';
 import { Item } from './style';
 
 function Setting() {
@@ -18,6 +19,7 @@ function Setting() {
             'margin-right': '10px',
             'margin-left': '12px',
             'font-size': '25px',
+            color: `${theme.$blue}`,
           }}
         />
         Recommend this app to your friends
@@ -27,7 +29,10 @@ function Setting() {
           (window.location.href = 'https://github.com/aldy97/Account_Book')
         }
       >
-        <i className='iconfont icon-github' />
+        <i
+          className='iconfont icon-github'
+          style={{ color: `${theme.$orange}` }}
+        />
         Support me by starring this app
       </Item>
       <Item
@@ -35,11 +40,17 @@ function Setting() {
           window.location.href = 'mailto:fengxiong34@gmail.com';
         }}
       >
-        <i className='iconfont icon-liaotian' />
+        <i
+          className='iconfont icon-liaotian'
+          style={{ color: `${theme.$blue}` }}
+        />
         Contact me
       </Item>
       <Item>
-        <i className='iconfont icon-shezhi' style={{ fontWeight: 800 }} />
+        <i
+          className='iconfont icon-shezhi'
+          style={{ fontWeight: 800, color: `${theme.$orange}` }}
+        />
         General Settings
       </Item>
     </div>

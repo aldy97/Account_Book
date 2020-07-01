@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import theme from '../../../static/theme';
 
 function SingleRecord(props) {
+  const record = props.record;
   const Specification = styled.div`
     height: ${theme.$barHeight};
     background: #fff;
@@ -23,31 +24,19 @@ function SingleRecord(props) {
     height: 10px;
     margin-right: 6px;
     margin-left: ${theme.$marginLeft};
+    background: ${record.type === 'expense' ? theme.$blue : theme.$orange};
   `;
-
-  const record = props.record;
-  const [showDetail, setShowDetail] = useState(false);
-
-  const close = () => {
-    setShowDetail(false);
-  };
 
   const getDetail = (show) => {
     if (show) {
-      return <Detail close={close} record={record} />;
+      return <Detail close={props.close} record={record} />;
     }
   };
 
   return (
     <div>
-      <Specification onClick={() => setShowDetail(true)}>
-        <IconWrapper
-          style={{
-            background: `${
-              record.type === 'expense' ? theme.$blue : theme.$orange
-            }`,
-          }}
-        >
+      <Specification onClick={() => props.setShowDetail(true)}>
+        <IconWrapper>
           <i
             className={`iconfont ${record.categoryIcon}`}
             style={{
@@ -70,7 +59,7 @@ function SingleRecord(props) {
           <span style={{ marginLeft: 5 }}>{record.amount}</span>
         </span>
       </Specification>
-      {getDetail(showDetail)}
+      {getDetail(props.showDetail)}
     </div>
   );
 }
