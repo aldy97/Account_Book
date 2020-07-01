@@ -4,10 +4,9 @@ import theme from '../../static/theme/index';
 export const Item = styled.div`
   width: ${theme.$width};
   height: ${theme.$barHeight};
-  background: #eee;
+  background: #fff;
   line-height: ${theme.$barHeight};
   border-bottom: 1px solid #eee;
-  margin-bottom: 8px;
   cursor: pointer;
   @media (max-width: 500px) {
     width: calc(100vw);

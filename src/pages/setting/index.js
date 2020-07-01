@@ -7,9 +7,11 @@ function Setting() {
       style={{
         position: 'fixed',
         marginTop: 88,
+        height: '100%',
+        background: '#eee',
       }}
     >
-      <Item>
+      <Item style={{ marginBottom: 8 }}>
         <i
           className='iconfont icon-erweima'
           style={{

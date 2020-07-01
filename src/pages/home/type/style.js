@@ -20,7 +20,7 @@ export const TypeWrapper = styled.div`
 
 export const CloseBar = styled.div`
   height: ${theme.$barHeight};
-  width: ${theme.$width};
+  width: 478px;
   background: #eee;
   position: fixed;
   i {
@@ -88,4 +88,13 @@ export const Item = styled.div`
   &: hover {
     border: 1px solid ${theme.$blue};
   }
+`;
+
+export const Shadow = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.5);
 `;
