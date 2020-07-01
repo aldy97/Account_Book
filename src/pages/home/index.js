@@ -8,6 +8,9 @@ import NumPad from './Money/index';
 import styled from 'styled-components';
 
 function Home() {
+  const [stateTitle, setStateTitle] = useState('All Types');
+  const [stateIcon, setStateIcon] = useState('icon-type');
+
   //是否显示类型区块
   const [show, setShow] = useState(false);
   //是否显示选择月份区块
@@ -17,7 +20,13 @@ function Home() {
 
   const showType = (show) => {
     if (show) {
-      return <Type handleSetShow={handleSetShow} />;
+      return (
+        <Type
+          handleSetShow={handleSetShow}
+          setStateTitle={setStateTitle}
+          setStateIcon={setStateIcon}
+        />
+      );
     }
   };
 
@@ -62,6 +71,8 @@ function Home() {
       <StateHeader
         handleSetShow={handleSetShow}
         handleSetShowMonth={handleSetShowMonth}
+        stateTitle={stateTitle}
+        stateIcon={stateIcon}
       />
       {showType(show)}
       {showSelectedMonth(showMonth)}

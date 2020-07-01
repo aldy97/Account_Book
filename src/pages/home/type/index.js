@@ -11,6 +11,12 @@ import {
 } from './style';
 
 function Type(props) {
+  const handleClickItem = (name, iconName) => {
+    props.setStateTitle(name);
+    props.setStateIcon(iconName);
+    props.handleSetShow();
+  };
+
   return (
     <Shadow>
       <TypeWrapper>
@@ -25,7 +31,10 @@ function Type(props) {
             <ItemWrapper>
               {ExpenseList.map((item) => {
                 return (
-                  <Item key={item.id}>
+                  <Item
+                    key={item.id}
+                    onClick={() => handleClickItem(item.name, item.icon)}
+                  >
                     <i className={`iconfont ${item.icon}`}></i>
                     <div className='text'>{item.name}</div>
                   </Item>

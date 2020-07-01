@@ -9,8 +9,8 @@ function StatesHeader(props) {
         onClick={props.handleSetShow}
         style={{ cursor: 'pointer' }}
       >
-        <div>All Types</div>
-        <i className='iconfont'>&#xe6c0;</i>
+        <div>{props.stateTitle}</div>
+        <i className={`iconfont ${props.stateIcon}`}></i>
       </ButtonWrapper>
 
       <DateWrapper>
