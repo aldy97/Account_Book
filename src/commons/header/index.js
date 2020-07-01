@@ -1,6 +1,5 @@
 import React from 'react';
 import { HeaderWrapper } from './style';
-import { Animated } from 'react-animated-css';
 
 function Header() {
   return (
