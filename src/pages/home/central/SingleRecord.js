@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Category } from '../categoryList/style';
 import Detail from './Detail';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
 
 function SingleRecord(props) {
+  const [showDetail, setShowDetail] = useState(false);
   const record = props.record;
+  const close = () => {
+    setShowDetail(false);
+  };
+
+  const handleClick = () => {
+    setShowDetail(true);
+  };
+
   const Specification = styled.div`
     height: ${theme.$barHeight};
     background: #fff;
@@ -29,13 +38,13 @@ function SingleRecord(props) {
 
   const getDetail = (show) => {
     if (show) {
-      return <Detail close={props.close} record={record} />;
+      return <Detail close={close} record={record} />;
     }
   };
 
   return (
     <div>
-      <Specification onClick={() => props.setShowDetail(true)}>
+      <Specification onClick={handleClick}>
         <IconWrapper>
           <i
             className={`iconfont ${record.categoryIcon}`}
@@ -59,7 +68,7 @@ function SingleRecord(props) {
           <span style={{ marginLeft: 5 }}>{record.amount}</span>
         </span>
       </Specification>
-      {getDetail(props.showDetail)}
+      {getDetail(showDetail)}
     </div>
   );
 }

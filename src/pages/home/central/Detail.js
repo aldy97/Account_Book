@@ -21,8 +21,8 @@ function Detail(props) {
     margin: 20px;
     margin-top: 55px;
     border-radius: 6px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: ${theme.$marginLeft};
+    margin-right: ${theme.$marginLeft};
     background: #fff;
     padding: 20px;
     padding-bottom: 0px;
