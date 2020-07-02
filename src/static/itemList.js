@@ -1,5 +1,6 @@
+export const AllType = [{ name: 'All Types', icon: 'icon-type', id: 0 }];
+
 export const ExpenseList = [
-  { name: 'Clothing', icon: 'icon-yifu', id: 0 },
   { name: 'Groceries', icon: 'icon-caigou', id: 1 },
   { name: 'Diner', icon: 'icon-daochacanyin', id: 2 },
   { name: 'Investment', icon: 'icon-gupiao', id: 3 },
@@ -20,11 +21,12 @@ export const ExpenseList = [
   { name: 'Travel', icon: 'icon-huaban', id: 18 },
   { name: 'Gifts', icon: 'icon-liwu', id: 19 },
   { name: 'Books', icon: 'icon-icon_huabanfuben', id: 20 },
+  { name: 'Clothing', icon: 'icon-yifu', id: 21 },
 ];
 
 export const IncomeList = [
-  { name: 'Salary', icon: 'icon-gongzi', id: 21 },
-  { name: 'Investment', icon: 'icon-gupiao', id: 22 },
-  { name: 'Cash Gift', icon: 'icon-red-packet_icon', id: 23 },
-  { name: 'Part time', icon: 'icon-jianzhi', id: 24 },
+  { name: 'Salary', icon: 'icon-gongzi', id: 22 },
+  { name: 'Investment', icon: 'icon-gupiao', id: 23 },
+  { name: 'Cash Gift', icon: 'icon-red-packet_icon', id: 24 },
+  { name: 'Part time', icon: 'icon-jianzhi', id: 25 },
 ];

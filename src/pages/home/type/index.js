@@ -13,9 +13,8 @@ import {
 } from './style';
 
 function Type(props) {
-  const handleClickItem = (name, iconName) => {
-    props.setStateTitle(name);
-    props.setStateIcon(iconName);
+  const handleClickItem = (id) => {
+    props.setTypeId(id);
     props.handleSetShow();
   };
 
@@ -35,17 +34,14 @@ function Type(props) {
           <AllType>
             <ItemWrapper>
               <StyledItem
-                stateTitle={props.stateTitle}
-                onClick={() => handleClickItem('All Types', 'icon-type')}
+                onClick={() => handleClickItem(0)}
                 style={{
-                  background: `${
-                    props.stateTitle === 'All Types' ? theme.$blue : ''
-                  }`,
+                  background: `${props.typeId === 0 ? theme.$blue : ''}`,
                 }}
               >
                 <div
                   style={{
-                    color: `${props.stateTitle === 'All Types' ? '#fff' : ''}`,
+                    color: `${props.typeId === 0 ? '#fff' : ''}`,
                   }}
                 >
                   <i className={`iconfont icon-type`}></i>
@@ -61,18 +57,16 @@ function Type(props) {
                 return (
                   <StyledItem
                     key={item.id}
-                    onClick={() => handleClickItem(item.name, item.icon)}
+                    onClick={() => handleClickItem(item.id)}
                     style={{
                       background: `${
-                        props.stateTitle === item.name ? theme.$blue : ''
+                        props.typeId === item.id ? theme.$blue : ''
                       }`,
                     }}
                   >
                     <div
                       style={{
-                        color: `${
-                          props.stateTitle === item.name ? '#fff' : ''
-                        }`,
+                        color: `${props.typeId === item.id ? '#fff' : ''}`,
                       }}
                     >
                       <i className={`iconfont ${item.icon}`}></i>
@@ -90,18 +84,16 @@ function Type(props) {
                 return (
                   <StyledItem
                     key={item.id}
-                    onClick={() => handleClickItem(item.name, item.icon)}
+                    onClick={() => handleClickItem(item.id)}
                     style={{
                       background: `${
-                        props.stateTitle === item.name ? theme.$blue : ''
+                        props.typeId === item.id ? theme.$blue : ''
                       }`,
                     }}
                   >
                     <div
                       style={{
-                        color: `${
-                          props.stateTitle === item.name ? '#fff' : ''
-                        }`,
+                        color: `${props.typeId === item.id ? '#fff' : ''}`,
                       }}
                     >
                       <i className={`iconfont ${item.icon}`}></i>

@@ -9,10 +9,10 @@ import styled from 'styled-components';
 import dayjs from 'dayjs';
 
 function Home() {
-  //当前被选择的过滤类型以及图标
-  const [stateTitle, setStateTitle] = useState('All Types');
-  const [stateIcon, setStateIcon] = useState('icon-type');
-  //当前被选择的月份
+  //被选择的消费/支出类型的id: number
+  const [typeId, setTypeId] = useState(0);
+
+  //被选择的具体时间，其实并不是月份！！
   const [month, setMonth] = useState(dayjs());
 
   //是否显示过滤器类型区块
@@ -27,9 +27,8 @@ function Home() {
       return (
         <Type
           handleSetShow={handleSetShow}
-          stateTitle={stateTitle}
-          setStateTitle={setStateTitle}
-          setStateIcon={setStateIcon}
+          typeId={typeId}
+          setTypeId={setTypeId}
         />
       );
     }
@@ -83,8 +82,7 @@ function Home() {
       <StateHeader
         handleSetShow={handleSetShow}
         handleSetShowMonth={handleSetShowMonth}
-        stateTitle={stateTitle}
-        stateIcon={stateIcon}
+        typeId={typeId}
         month={month}
       />
       {showType(show)}
