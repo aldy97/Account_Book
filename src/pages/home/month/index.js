@@ -53,9 +53,21 @@ function SelectMonth(props) {
             <ItemMonth
               key={m.get('month')}
               onClick={() => submit(m)}
-              style={{ background: `${props.month === m ? theme.$blue : ''}` }}
+              style={{
+                background: `${
+                  props.month.get('month') === m.get('month') ? theme.$blue : ''
+                }`,
+              }}
             >
-              {m.get('month') + 1}
+              <div
+                style={{
+                  color: `${
+                    props.month.get('month') === m.get('month') ? '#fff' : ''
+                  }`,
+                }}
+              >
+                {m.get('month') + 1}
+              </div>
             </ItemMonth>
           ))}
         </ItemWrapper>
