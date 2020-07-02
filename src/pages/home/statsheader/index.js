@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Wrapper, TypeFilter, MonthFilter } from './style';
 import { ExpenseList, IncomeList, AllType } from '../../../static/itemList';
 
-//过滤器（类型选择 + 月份选择），支出/收入
+//过滤器（类型选择 + 月份选择), 以及支出/收入显示
 function StatesHeader(props) {
   const list = ExpenseList.concat(IncomeList).concat(AllType);
   const item = list.filter((item) => item.id === props.typeId)[0];
