@@ -4,8 +4,9 @@ export const TypeWrapper = styled.div`
   width: 478px;
   height: calc(75vh);
   overflow: scroll;
+  overflow-x : hidden;
   position: fixed;
-  top: 200px;
+  bottom: 0;
   z-index: 20;
   border: 1px solid #eee;
   background: ${theme.$white};
@@ -20,7 +21,7 @@ export const TypeWrapper = styled.div`
 
 export const CloseBar = styled.div`
   height: ${theme.$barHeight};
-  width: 478px;
+  width: ${theme.$width};
   background: #eee;
   position: fixed;
   i {
