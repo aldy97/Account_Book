@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SingleRecord from './SingleRecord';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
 import { DEFAULT_RECORDS } from './record';
 
 //首页的中间部分：记录支出/收入详情
-function Central() {
+function Central(props) {
   const StyledCentral = styled.div`
     position: fixed;
     top: 200px;
@@ -31,15 +31,26 @@ function Central() {
     font-size: ${theme.$smallTextSize};
   `;
 
+  const { month, typeId } = props;
+
+  useEffect(() => {
+    console.log('month: ' + month.format('MM'));
+    console.log('typeId: ' + typeId);
+  });
+
   return (
     <StyledCentral>
       {DEFAULT_RECORDS.map((item) => {
         return (
-          <DailyWrapper key={item.id}>
-            <SectionHeader>{item.date}</SectionHeader>
-            {item.recordList.map((record) => {
-              return <SingleRecord record={record} />;
-            })}
+          <DailyWrapper key={item.categoryId}>
+            <SectionHeader>{item.date.toString()}</SectionHeader>
+            {item.recordList
+              .filter((item) =>
+                typeId === 0 ? item : item.categoryId === typeId
+              )
+              .map((record) => {
+                return <SingleRecord record={record} />;
+              })}
           </DailyWrapper>
         );
       })}

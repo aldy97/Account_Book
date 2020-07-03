@@ -2,11 +2,12 @@ import dayjs from 'dayjs';
 
 export const DEFAULT_RECORDS = [
   {
-    date: dayjs('2020-04-04').toString(),
+    date: dayjs('2020-04-04'),
     recordList: [
       {
         id: 0,
         category: 'Diner',
+        categoryId: 2,
         categoryIcon: 'icon-daochacanyin',
         amount: 300,
         type: 'expense',
@@ -14,6 +15,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 1,
         category: 'Salery',
+        categoryId: 22,
         categoryIcon: 'icon-gongzi',
         amount: 400,
         type: 'income',
@@ -21,6 +23,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 2,
         category: 'Sports',
+        categoryId: 13,
         categoryIcon: 'icon-yundong',
         amount: 200,
         type: 'expense',
@@ -28,11 +31,12 @@ export const DEFAULT_RECORDS = [
     ],
   },
   {
-    date: dayjs('2020-06-27').toString(),
+    date: dayjs('2020-06-27'),
     recordList: [
       {
         id: 3,
         category: 'Diner',
+        categoryId: 2,
         categoryIcon: 'icon-daochacanyin',
         amount: 300,
         type: 'expense',
@@ -40,6 +44,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 4,
         category: 'Salery',
+        categoryId: 22,
         categoryIcon: 'icon-gongzi',
         amount: 400,
         type: 'income',
@@ -52,6 +57,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 0,
         category: 'Diner',
+        categoryId: 2,
         categoryIcon: 'icon-daochacanyin',
         amount: 300,
         type: 'expense',
@@ -59,6 +65,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 1,
         category: 'Salery',
+        categoryId: 22,
         categoryIcon: 'icon-gongzi',
         amount: 400,
         type: 'income',
@@ -66,6 +73,7 @@ export const DEFAULT_RECORDS = [
       {
         id: 2,
         category: 'Sports',
+        categoryId: 13,
         categoryIcon: 'icon-yundong',
         amount: 200,
         type: 'expense',

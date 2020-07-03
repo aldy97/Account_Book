@@ -12,7 +12,7 @@ function Home() {
   //被选择的消费/支出类型的id: number
   const [typeId, setTypeId] = useState(0);
 
-  //被选择的具体时间，其实并不是月份！！
+  //被选择的具体时间，并不是月份！！
   const [month, setMonth] = useState(dayjs());
 
   //是否显示过滤器类型区块
@@ -89,7 +89,7 @@ function Home() {
       {showSelectedMonth(showMonth)}
       {showDrawer(showMoney)}
       <Button handleSetShowNumPad={handleSetShowNumPad} />
-      <Central />
+      <Central month={month} typeId={typeId} />
     </StyledHome>
   );
 }
