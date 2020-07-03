@@ -43,7 +43,9 @@ function Money(props) {
             className={expenseButtonSelected ? 'selected' : ''}
             style={{ background: `${theme.$blue}` }}
             onClick={() => {
-              setExpenseButtonSelected(!expenseButtonSelected);
+              if (!expenseButtonSelected) {
+                setExpenseButtonSelected(true);
+              }
             }}
           >
             Expense
@@ -52,7 +54,9 @@ function Money(props) {
             className={expenseButtonSelected ? '' : 'selected'}
             style={{ background: `${theme.$orange}` }}
             onClick={() => {
-              setExpenseButtonSelected(!expenseButtonSelected);
+              if (expenseButtonSelected) {
+                setExpenseButtonSelected(false);
+              }
             }}
           >
             Income

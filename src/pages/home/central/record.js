@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 
 export const DEFAULT_RECORDS = [
   {
-    date: dayjs('2020-04-04'),
+    date: dayjs().month(5).day(10),
     recordList: [
       {
         id: 0,
@@ -31,7 +31,7 @@ export const DEFAULT_RECORDS = [
     ],
   },
   {
-    date: dayjs('2020-06-27'),
+    date: dayjs().month(6).day(27),
     recordList: [
       {
         id: 3,
@@ -52,7 +52,7 @@ export const DEFAULT_RECORDS = [
     ],
   },
   {
-    date: dayjs('2020-03-04').toString(),
+    date: dayjs().month(4).day(12),
     recordList: [
       {
         id: 0,
