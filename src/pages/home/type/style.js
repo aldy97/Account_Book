@@ -43,8 +43,8 @@ export const CloseBar = styled.div`
   }
 `;
 
-export const OutCome = styled.div`
-  .title {
+export const Expense = styled.div`
+  .expense {
     margin-left: 3.8%;
     margin-top: 3.8%;
     font-size: ${theme.$middleTextSize};
@@ -52,7 +52,14 @@ export const OutCome = styled.div`
   }
 `;
 
-export const InCome = styled(OutCome)``;
+export const InCome = styled(Expense)`
+  .income {
+    margin-left: 3.8%;
+    margin-top: 3.8%;
+    font-size: ${theme.$middleTextSize};
+    color: ${theme.$orange};
+  }
+`;
 
 export const ItemWrapper = styled.div`
   background: #fff;

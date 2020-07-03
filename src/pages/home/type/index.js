@@ -5,7 +5,7 @@ import { ExpenseList, IncomeList } from '../../../static/itemList';
 import {
   TypeWrapper,
   CloseBar,
-  OutCome,
+  Expense,
   InCome,
   ItemWrapper,
   Item,
@@ -18,7 +18,7 @@ function Type(props) {
     props.handleSetShow();
   };
 
-  const AllType = styled(OutCome)``;
+  const AllType = styled(Expense)``;
 
   const StyledItem = styled(Item)``;
 
@@ -50,8 +50,8 @@ function Type(props) {
               </StyledItem>
             </ItemWrapper>
           </AllType>
-          <OutCome>
-            <div className='title'>Expense</div>
+          <Expense>
+            <div className='expense'>Expense</div>
             <ItemWrapper>
               {ExpenseList.map((item) => {
                 return (
@@ -76,9 +76,9 @@ function Type(props) {
                 );
               })}
             </ItemWrapper>
-          </OutCome>
+          </Expense>
           <InCome style={{ marginBottom: '25px' }}>
-            <div className='title'>Income</div>
+            <div className='income'>Income</div>
             <ItemWrapper>
               {IncomeList.map((item) => {
                 return (
@@ -87,7 +87,7 @@ function Type(props) {
                     onClick={() => handleClickItem(item.id)}
                     style={{
                       background: `${
-                        props.typeId === item.id ? theme.$blue : ''
+                        props.typeId === item.id ? theme.$orange : ''
                       }`,
                     }}
                   >
