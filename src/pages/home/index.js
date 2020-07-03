@@ -15,6 +15,9 @@ function Home() {
   //被选择的具体时间，并不是月份！！
   const [month, setMonth] = useState(dayjs());
 
+  const [expense, setExpense] = useState(0);
+  const [income, setIncome] = useState(0);
+
   //是否显示过滤器类型区块
   const [show, setShow] = useState(false);
   //是否显示选择月份区块
@@ -84,12 +87,19 @@ function Home() {
         handleSetShowMonth={handleSetShowMonth}
         typeId={typeId}
         month={month}
+        expense={expense}
+        income={income}
       />
       {showType(show)}
       {showSelectedMonth(showMonth)}
       {showDrawer(showMoney)}
       <Button handleSetShowNumPad={handleSetShowNumPad} />
-      <Central month={month} typeId={typeId} />
+      <Central
+        month={month}
+        typeId={typeId}
+        setExpense={setExpense}
+        setIncome={setIncome}
+      />
     </StyledHome>
   );
 }

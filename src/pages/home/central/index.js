@@ -17,6 +17,13 @@ function Central(props) {
     background: #fff;
   `;
 
+  const NoData = styled.div`
+    margin-top: 40px;
+    text-align: center;
+    font-size: ${theme.$largeTextSize};
+    color: #333;
+  `;
+
   const DailyWrapper = styled.div`
     border-bottom: 1px solid #666;
   `;
@@ -29,40 +36,51 @@ function Central(props) {
     margin-left: ${theme.$marginLeft};
     color: #333;
     font-size: ${theme.$smallTextSize};
+    span {
+      float: right;
+      margin-right: ${theme.$marginLeft};
+    }
   `;
 
-  const { month, typeId } = props;
+  const { month, typeId, setExpense, setIncome } = props;
 
   const filteredMonthList = DEFAULT_RECORDS.filter(
     (item) => item.date.format('MM') === month.format('MM')
   );
 
-  const filteredTypeList = filteredMonthList.map((item) =>
-    item.recordList.filter((record) =>
-      typeId === 0 ? record : record.categoryId === typeId
-    )
-  );
-
   useEffect(() => {
-    console.log(filteredTypeList);
+    // console.log(filteredMonthList.length);
+    // console.log(hasType(filteredMonthList[0].recordList));
+    // console.log(isNotEmptyAfterTypeFilter(filteredMonthList));
+    let expense = 0;
+    expense += 0;
+    let income = 0;
+    setExpense(expense);
+    setIncome(income);
   });
 
   return (
     <StyledCentral>
-      {filteredMonthList.map((item) => {
-        return (
-          <DailyWrapper key={item.categoryId}>
-            <SectionHeader>{item.date.toString()}</SectionHeader>
-            {item.recordList
-              .filter((item) =>
-                typeId === 0 ? item : item.categoryId === typeId
-              )
-              .map((record) => {
-                return <SingleRecord record={record} />;
-              })}
-          </DailyWrapper>
-        );
-      })}
+      {filteredMonthList.length !== 0 ? (
+        filteredMonthList.map((item, index) => {
+          return (
+            <DailyWrapper key={index}>
+              <SectionHeader>
+                {item.date.format('MM-DD').toString()}
+              </SectionHeader>
+              {item.recordList
+                .filter((item) =>
+                  typeId === 0 ? item : item.categoryId === typeId
+                )
+                .map((record) => {
+                  return <SingleRecord record={record} />;
+                })}
+            </DailyWrapper>
+          );
+        })
+      ) : (
+        <NoData>No data</NoData>
+      )}
     </StyledCentral>
   );
 }
