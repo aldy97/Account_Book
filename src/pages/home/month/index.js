@@ -38,7 +38,7 @@ function SelectMonth(props) {
   const thisYearMonths = prevMonths.filter((m) => m.isSame(thisYear, 'year'));
 
   return (
-    <Shadow onClick={props.handleSetShowMonth}>
+    <Shadow>
       <Wrapper>
         <CloseBar>
           <i

@@ -23,7 +23,7 @@ function Type(props) {
   const StyledItem = styled(Item)``;
 
   return (
-    <Shadow onClick={props.handleSetShow}>
+    <Shadow>
       <TypeWrapper>
         <CloseBar>
           <i className='iconfont' onClick={props.handleSetShow}>

@@ -27,7 +27,7 @@ function Money(props) {
   };
 
   return (
-    <Shadow onClick={props.handleSetShowNumPad}>
+    <Shadow>
       <StyledMoney>
         <CloseBar style={{ border: '1px solid #eee', position: 'static' }}>
           <i
