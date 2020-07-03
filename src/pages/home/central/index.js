@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SingleRecord from './SingleRecord';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
@@ -33,11 +33,23 @@ function Central(props) {
 
   const { month, typeId } = props;
 
+  const filteredMonthList = DEFAULT_RECORDS.filter(
+    (item) => item.date.format('MM') === month.format('MM')
+  );
+
+  const filteredTypeList = filteredMonthList.map((item) =>
+    item.recordList.filter((record) =>
+      typeId === 0 ? record : record.categoryId === typeId
+    )
+  );
+
+  useEffect(() => {
+    console.log(filteredTypeList);
+  });
+
   return (
     <StyledCentral>
-      {DEFAULT_RECORDS.filter(
-        (item) => item.date.format('MM') === month.format('MM')
-      ).map((item) => {
+      {filteredMonthList.map((item) => {
         return (
           <DailyWrapper key={item.categoryId}>
             <SectionHeader>{item.date.toString()}</SectionHeader>
