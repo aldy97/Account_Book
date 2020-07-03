@@ -97,7 +97,7 @@ export const Item = styled.div`
 export const Shadow = styled.div`
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: ${theme.$width};
   bottom: 0;
   z-index: 12;
   background: rgba(0, 0, 0, 0.5);
