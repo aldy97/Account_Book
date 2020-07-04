@@ -22,6 +22,9 @@ function Central(props) {
     text-align: center;
     font-size: ${theme.$largeTextSize};
     color: #333;
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
   `;
 
   const DailyWrapper = styled.div`
@@ -60,7 +63,7 @@ function Central(props) {
   });
 
   return (
-    <div style = {{width: 0, overflow:'hidden'}}>
+    <div style={{ width: 0, overflow: 'hidden' }}>
       <StyledCentral>
         {filteredMonthList.length !== 0 ? (
           filteredMonthList.map((item, index) => {
@@ -77,13 +80,13 @@ function Central(props) {
                     return <SingleRecord record={record} />;
                   })}
               </DailyWrapper>
-            ); 
+            );
           })
         ) : (
           <NoData>No data</NoData>
         )}
       </StyledCentral>
-      </div>
+    </div>
   );
 }
 
