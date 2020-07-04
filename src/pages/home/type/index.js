@@ -22,100 +22,91 @@ function Type(props) {
 
   const StyledItem = styled(Item)``;
 
-  const StyledShadow = styled(Shadow)`
-    width: 100%;
-    overflow-y: scroll;
-    padding-right: 17px;
-    box-sizing: content-box;
-  `;
-
   return (
-    <div style={{ overflow: 'hidden' }}>
-      <StyledShadow>
-        <TypeWrapper>
-          <CloseBar>
-            <i className='iconfont' onClick={props.handleSetShow}>
-              &#xe687;
-            </i>
-          </CloseBar>
-          <div className='in-out'>
-            <AllType>
-              <ItemWrapper>
-                <StyledItem
-                  onClick={() => handleClickItem(0)}
+    <Shadow>
+      <TypeWrapper>
+        <CloseBar>
+          <i className='iconfont' onClick={props.handleSetShow}>
+            &#xe687;
+          </i>
+        </CloseBar>
+        <div className='in-out'>
+          <AllType>
+            <ItemWrapper>
+              <StyledItem
+                onClick={() => handleClickItem(0)}
+                style={{
+                  background: `${props.typeId === 0 ? theme.$blue : ''}`,
+                }}
+              >
+                <div
                   style={{
-                    background: `${props.typeId === 0 ? theme.$blue : ''}`,
+                    color: `${props.typeId === 0 ? '#fff' : ''}`,
                   }}
                 >
-                  <div
+                  <i className={`iconfont icon-type`}></i>
+                  <div className='text'>All Types</div>
+                </div>
+              </StyledItem>
+            </ItemWrapper>
+          </AllType>
+          <Expense>
+            <div className='expense'>Expense</div>
+            <ItemWrapper>
+              {ExpenseList.map((item) => {
+                return (
+                  <StyledItem
+                    key={item.id}
+                    onClick={() => handleClickItem(item.id)}
                     style={{
-                      color: `${props.typeId === 0 ? '#fff' : ''}`,
+                      background: `${
+                        props.typeId === item.id ? theme.$blue : ''
+                      }`,
                     }}
                   >
-                    <i className={`iconfont icon-type`}></i>
-                    <div className='text'>All Types</div>
-                  </div>
-                </StyledItem>
-              </ItemWrapper>
-            </AllType>
-            <Expense>
-              <div className='expense'>Expense</div>
-              <ItemWrapper>
-                {ExpenseList.map((item) => {
-                  return (
-                    <StyledItem
-                      key={item.id}
-                      onClick={() => handleClickItem(item.id)}
+                    <div
                       style={{
-                        background: `${
-                          props.typeId === item.id ? theme.$blue : ''
-                        }`,
+                        color: `${props.typeId === item.id ? '#fff' : ''}`,
                       }}
                     >
-                      <div
-                        style={{
-                          color: `${props.typeId === item.id ? '#fff' : ''}`,
-                        }}
-                      >
-                        <i className={`iconfont ${item.icon}`}></i>
-                        <div className='text'>{item.name}</div>
-                      </div>
-                    </StyledItem>
-                  );
-                })}
-              </ItemWrapper>
-            </Expense>
-            <InCome style={{ marginBottom: '25px' }}>
-              <div className='income'>Income</div>
-              <ItemWrapper>
-                {IncomeList.map((item) => {
-                  return (
-                    <StyledItem
-                      key={item.id}
-                      onClick={() => handleClickItem(item.id)}
+                      <i className={`iconfont ${item.icon}`}></i>
+                      <div className='text'>{item.name}</div>
+                    </div>
+                  </StyledItem>
+                );
+              })}
+            </ItemWrapper>
+          </Expense>
+          <InCome style={{ marginBottom: '25px' }}>
+            <div className='income'>Income</div>
+            <ItemWrapper>
+              {IncomeList.map((item) => {
+                return (
+                  <StyledItem
+                    key={item.id}
+                    onClick={() => handleClickItem(item.id)}
+                    style={{
+                      background: `${
+                        props.typeId === item.id ? theme.$orange : ''
+                      }`,
+                    }}
+                  >
+                    <div
                       style={{
-                        background: `${
-                          props.typeId === item.id ? theme.$orange : ''
-                        }`,
+                        color: `${props.typeId === item.id ? '#fff' : ''}`,
                       }}
                     >
-                      <div
-                        style={{
-                          color: `${props.typeId === item.id ? '#fff' : ''}`,
-                        }}
-                      >
-                        <i className={`iconfont ${item.icon}`}></i>
-                        <div className='text'>{item.name}</div>
-                      </div>
-                    </StyledItem>
-                  );
-                })}
-              </ItemWrapper>
-            </InCome>
-          </div>
-        </TypeWrapper>
-      </StyledShadow>
-    </div>
+                      <i className={`iconfont ${item.icon}`}></i>
+                      <div className='text'>{item.name}</div>
+                    </div>
+                  </StyledItem>
+                );
+              })}
+            </ItemWrapper>
+          </InCome>
+        </div>
+      </TypeWrapper>
+    </Shadow>
   );
 }
 

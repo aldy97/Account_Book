@@ -4,7 +4,7 @@ export const TypeWrapper = styled.div`
   width: 478px;
   height: calc(75vh);
   overflow: scroll;
-  overflow-x : hidden;
+  overflow-x: hidden;
   position: fixed;
   bottom: 0;
   z-index: 20;
@@ -96,7 +96,8 @@ export const Item = styled.div`
 `;
 
 export const Shadow = styled.div`
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   height: 100%;
   width: ${theme.$width};
   bottom: 0;
