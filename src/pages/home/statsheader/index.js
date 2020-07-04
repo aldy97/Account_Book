@@ -22,7 +22,7 @@ function StatesHeader(props) {
         <i className={`iconfont ${item.icon}`}></i>
       </TypeFilter>
       <MonthFilter>
-        <span className='date' onClick={handleSetShowMonth}>
+        <span className='date' onClick={handleSetShowMonth} style={{cursor: 'pointer'}}>
           {month.format('MMMM YYYY')}
           <i className='iconfont' name='arrow-down' style={{ marginLeft: 4 }}>
             &#xe668;

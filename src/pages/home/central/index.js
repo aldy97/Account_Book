@@ -60,28 +60,30 @@ function Central(props) {
   });
 
   return (
-    <StyledCentral>
-      {filteredMonthList.length !== 0 ? (
-        filteredMonthList.map((item, index) => {
-          return (
-            <DailyWrapper key={index}>
-              <SectionHeader>
-                {item.date.format('MM-DD').toString()}
-              </SectionHeader>
-              {item.recordList
-                .filter((item) =>
-                  typeId === 0 ? item : item.categoryId === typeId
-                )
-                .map((record) => {
-                  return <SingleRecord record={record} />;
-                })}
-            </DailyWrapper>
-          );
-        })
-      ) : (
-        <NoData>No data</NoData>
-      )}
-    </StyledCentral>
+    <div style = {{width: 0, overflow:'hidden'}}>
+      <StyledCentral>
+        {filteredMonthList.length !== 0 ? (
+          filteredMonthList.map((item, index) => {
+            return (
+              <DailyWrapper key={index}>
+                <SectionHeader>
+                  {item.date.format('MM-DD').toString()}
+                </SectionHeader>
+                {item.recordList
+                  .filter((item) =>
+                    typeId === 0 ? item : item.categoryId === typeId
+                  )
+                  .map((record) => {
+                    return <SingleRecord record={record} />;
+                  })}
+              </DailyWrapper>
+            ); 
+          })
+        ) : (
+          <NoData>No data</NoData>
+        )}
+      </StyledCentral>
+      </div>
   );
 }
 

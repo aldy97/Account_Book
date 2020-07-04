@@ -10,6 +10,7 @@ function Detail(props) {
     width: ${theme.$width};
     height: calc(100vh);
     position: fixed;
+    overflow: hidden;
     top: 200px;
     background: #eee;
     @media (max-width: 500px) {

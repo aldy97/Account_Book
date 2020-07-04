@@ -32,7 +32,6 @@ export const TypeFilter = styled.div`
 
 export const MonthFilter = styled.div`
   padding: 18px 18px;
-  cursor: pointer;
   display: flex;
   span {
     font-size: ${theme.$smallTextSize};
