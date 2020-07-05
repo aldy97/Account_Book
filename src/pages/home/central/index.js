@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import SingleRecord from './SingleRecord';
+import Daily from './daily';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
 import { DEFAULT_RECORDS } from './record';
@@ -18,30 +18,12 @@ function Central(props) {
   `;
 
   const NoData = styled.div`
-    margin-top: 40px;
+    margin-top: 100px;
     text-align: center;
     font-size: ${theme.$largeTextSize};
-    color: #333;
+    color: #666;
     @media (max-width: 500px) {
       width: calc(100vw);
-    }
-  `;
-
-  const DailyWrapper = styled.div`
-    border-bottom: 1px solid #666;
-  `;
-
-  const SectionHeader = styled.div`
-    background: #fff;
-    height: ${theme.$barHeight};
-    border-bottom: 1px solid #eee;
-    line-height: ${theme.$barHeight};
-    margin-left: ${theme.$marginLeft};
-    color: #333;
-    font-size: ${theme.$smallTextSize};
-    span {
-      float: right;
-      margin-right: ${theme.$marginLeft};
     }
   `;
 
@@ -52,9 +34,6 @@ function Central(props) {
   );
 
   useEffect(() => {
-    // console.log(filteredMonthList.length);
-    // console.log(hasType(filteredMonthList[0].recordList));
-    // console.log(isNotEmptyAfterTypeFilter(filteredMonthList));
     let expense = 0;
     expense += 0;
     let income = 0;
@@ -63,30 +42,15 @@ function Central(props) {
   });
 
   return (
-    <div style={{ width: 0, overflow: 'hidden' }}>
-      <StyledCentral>
-        {filteredMonthList.length !== 0 ? (
-          filteredMonthList.map((item, index) => {
-            return (
-              <DailyWrapper key={index}>
-                <SectionHeader>
-                  {item.date.format('MM-DD').toString()}
-                </SectionHeader>
-                {item.recordList
-                  .filter((item) =>
-                    typeId === 0 ? item : item.categoryId === typeId
-                  )
-                  .map((record) => {
-                    return <SingleRecord record={record} />;
-                  })}
-              </DailyWrapper>
-            );
-          })
-        ) : (
-          <NoData>No data</NoData>
-        )}
-      </StyledCentral>
-    </div>
+    <StyledCentral>
+      {filteredMonthList.length !== 0 ? (
+        filteredMonthList.map((item, index) => {
+          return <Daily key={index} item={item} typeId={typeId} />;
+        })
+      ) : (
+        <NoData>----No data----</NoData>
+      )}
+    </StyledCentral>
   );
 }
 
