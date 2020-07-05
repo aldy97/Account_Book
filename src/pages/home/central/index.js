@@ -41,23 +41,43 @@ function Central(props) {
     setIncome(income);
   });
 
-  //校验该月是否有此类型的消费/支出
-  const typeIsNotFound = (list) => {
-    list.map((dailyRecord) => {
-      dailyRecord.recordList.map((record) => {
-        if (record.categoryId === typeId) {
-          return false;
-        }
-      });
-    });
-    return true;
+  //检查当天的recordList中是否有所选的类型
+  const hasSelectedType = (daily) => {
+    if (typeId === 0) {
+      return true;
+    } else {
+      return daily.recordList.filter((item) => item.categoryId === typeId)
+        .length === 0
+        ? false
+        : true;
+    }
   };
+
+  const hasTypeInThisMonth = (list) => {
+    if (list.filter((daily) => hasSelectedType(daily)).length === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  useEffect(() => {
+    console.log(hasTypeInThisMonth(filteredMonthList));
+  });
 
   return (
     <StyledCentral>
-      {filteredMonthList.length !== 0 && typeIsNotFound(filteredMonthList) ? (
+      {filteredMonthList.length !== 0 &&
+      hasTypeInThisMonth(filteredMonthList) ? (
         filteredMonthList.map((item, index) => {
-          return <Daily key={index} item={item} typeId={typeId} />;
+          return (
+            <Daily
+              key={index}
+              item={item}
+              typeId={typeId}
+              hasSelectedType={hasSelectedType}
+            />
+          );
         })
       ) : (
         <NoData>----No data----</NoData>

@@ -22,19 +22,7 @@ function Daily(props) {
     }
   `;
 
-  const { item, typeId } = props;
-
-  const hasSelectedType = (daily) => {
-    if (typeId === 0) {
-      console.log('show all types');
-      return true;
-    } else {
-      return daily.recordList.filter((item) => item.categoryId === typeId)
-        .length === 0
-        ? false
-        : true;
-    }
-  };
+  const { item, typeId, hasSelectedType } = props;
 
   return hasSelectedType(item) ? (
     <DailyWrapper>
