@@ -67,7 +67,6 @@ function SingleRecord(props) {
             marginRight: `${theme.$marginLeft}`,
           }}
         >
-          {record.type === 'expense' ? '-' : ''}
           <span style={{ marginLeft: 5 }}>{record.amount}</span>
         </span>
       </Specification>

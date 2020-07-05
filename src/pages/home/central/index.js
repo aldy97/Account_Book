@@ -33,14 +33,6 @@ function Central(props) {
     (item) => item.date.format('MM') === month.format('MM')
   );
 
-  useEffect(() => {
-    let expense = 0;
-    expense += 0;
-    let income = 0;
-    setExpense(expense);
-    setIncome(income);
-  });
-
   //检查当天的recordList中是否有所选的类型
   const hasSelectedType = (daily) => {
     if (typeId === 0) {
@@ -50,9 +42,10 @@ function Central(props) {
         .length === 0
         ? false
         : true;
-    }
+     }
   };
 
+  //检查当前选中的月份是否有所选的类型
   const hasTypeInThisMonth = (list) => {
     if (list.filter((daily) => hasSelectedType(daily)).length === 0) {
       return false;
@@ -62,8 +55,14 @@ function Central(props) {
   };
 
   useEffect(() => {
-    console.log(hasTypeInThisMonth(filteredMonthList));
-  });
+    const list = filteredMonthList.filter(item => hasSelectedType(item));
+    console.log(list.map(item => item.recordList));
+    let expense = 0;
+    let income = 0;
+    // if (typeId === 0) {
+    //   expense += filteredMonthList.map();
+    // }
+  })
 
   return (
     <StyledCentral>

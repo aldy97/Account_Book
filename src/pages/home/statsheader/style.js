@@ -56,4 +56,7 @@ export const MonthFilter = styled.div`
     color: #fff;
     flex: 1;
   }
+  .hidden {
+    display: none;
+  }
 `;

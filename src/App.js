@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './commons/header';
 import Footer from './commons/footer';
 import store from './store/index.js';
-import Home from './pages/home/index';
+import Home from './pages/home/home.js';
 import Stat from './pages/stat/index';
 import Setting from './pages/setting/index';
 import { Provider } from 'react-redux';

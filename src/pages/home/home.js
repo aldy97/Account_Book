@@ -16,7 +16,7 @@ function Home() {
   const [month, setMonth] = useState(dayjs());
 
   const [expense, setExpense] = useState(0);
-  const [income, setIncome] = useState(0);
+  const [income, setIncome] = useState(10);
 
   //是否显示过滤器类型区块
   const [show, setShow] = useState(false);

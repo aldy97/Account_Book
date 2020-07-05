@@ -12,7 +12,7 @@ function StatesHeader(props) {
     expense,
     income,
   } = props;
-  const list = ExpenseList.concat(IncomeList).concat(AllType);
+  const list = AllType.concat(ExpenseList).concat(IncomeList);
   const item = list.filter((item) => item.id === typeId)[0];
 
   return (
@@ -28,10 +28,10 @@ function StatesHeader(props) {
             &#xe668;
           </i>
         </span>
-        <span className='outcome' style={{ marginRight: 8 }}>
-          Expense: ${expense.toFixed(2)}
+        <span className={expense === 0 ? 'hidden' :''} style={{ marginRight: 8 }}>
+          Expense{typeId === 0 ? '' : ` on ${list[typeId].name}`}: ${expense.toFixed(2)}
         </span>
-        <span className='income'> Income: ${income.toFixed(2)}</span>
+        <span className={income === 0 ? 'hidden' :''}> Income{typeId === 0 ? '' : ` from ${list[typeId].name}`}: ${income.toFixed(2)}</span>
       </MonthFilter>
     </Wrapper>
   );
