@@ -6,7 +6,7 @@ import theme from '../../../static/theme';
 
 function SingleRecord(props) {
   const [showDetail, setShowDetail] = useState(false);
-  const record = props.record;
+  const { record } = props;
   const close = () => {
     setShowDetail(false);
   };
@@ -23,6 +23,9 @@ function SingleRecord(props) {
     font-weight: 100;
     border-bottom: 1px solid #eee;
     cursor: pointer;
+    &: hover {
+      background: #eee;
+    }
     @media (max-width: 500px) {
       width: calc(100vw);
     }

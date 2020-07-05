@@ -54,6 +54,9 @@ function Detail(props) {
       flex: 1;
       cursor: pointer;
     }
+    i {
+      margin-right: ${theme.$marginLeft};
+    }
   `;
 
   const IconWrapper = styled(Category)`
