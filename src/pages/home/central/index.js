@@ -41,9 +41,21 @@ function Central(props) {
     setIncome(income);
   });
 
+  //校验该月是否有此类型的消费/支出
+  const typeIsNotFound = (list) => {
+    list.map((dailyRecord) => {
+      dailyRecord.recordList.map((record) => {
+        if (record.categoryId === typeId) {
+          return false;
+        }
+      });
+    });
+    return true;
+  };
+
   return (
     <StyledCentral>
-      {filteredMonthList.length !== 0 ? (
+      {filteredMonthList.length !== 0 && typeIsNotFound(filteredMonthList) ? (
         filteredMonthList.map((item, index) => {
           return <Daily key={index} item={item} typeId={typeId} />;
         })

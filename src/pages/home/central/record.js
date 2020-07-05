@@ -34,7 +34,7 @@ export const DEFAULT_RECORDS = [
     date: dayjs().month(5).day(12),
     recordList: [
       {
-        id: 0,
+        id: 3,
         category: 'Diner',
         categoryId: 2,
         categoryIcon: 'icon-daochacanyin',
@@ -42,7 +42,7 @@ export const DEFAULT_RECORDS = [
         type: 'expense',
       },
       {
-        id: 1,
+        id: 4,
         category: 'Salery',
         categoryId: 22,
         categoryIcon: 'icon-gongzi',
@@ -50,10 +50,18 @@ export const DEFAULT_RECORDS = [
         type: 'income',
       },
       {
-        id: 2,
+        id: 5,
         category: 'Sports',
         categoryId: 13,
         categoryIcon: 'icon-yundong',
+        amount: 200,
+        type: 'expense',
+      },
+      {
+        id: 10,
+        category: 'Office',
+        categoryId: 11,
+        categoryIcon: 'icon-bangong',
         amount: 200,
         type: 'expense',
       },
@@ -63,7 +71,7 @@ export const DEFAULT_RECORDS = [
     date: dayjs().month(6).day(11),
     recordList: [
       {
-        id: 3,
+        id: 6,
         category: 'Diner',
         categoryId: 2,
         categoryIcon: 'icon-daochacanyin',
@@ -71,7 +79,7 @@ export const DEFAULT_RECORDS = [
         type: 'expense',
       },
       {
-        id: 4,
+        id: 7,
         category: 'Salery',
         categoryId: 22,
         categoryIcon: 'icon-gongzi',
@@ -84,7 +92,7 @@ export const DEFAULT_RECORDS = [
     date: dayjs().month(4).day(12),
     recordList: [
       {
-        id: 0,
+        id: 8,
         category: 'Diner',
         categoryId: 2,
         categoryIcon: 'icon-daochacanyin',
@@ -92,7 +100,7 @@ export const DEFAULT_RECORDS = [
         type: 'expense',
       },
       {
-        id: 1,
+        id: 9,
         category: 'Salery',
         categoryId: 22,
         categoryIcon: 'icon-gongzi',
@@ -100,7 +108,7 @@ export const DEFAULT_RECORDS = [
         type: 'income',
       },
       {
-        id: 2,
+        id: 10,
         category: 'Sports',
         categoryId: 13,
         categoryIcon: 'icon-yundong',

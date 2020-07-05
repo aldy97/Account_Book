@@ -24,15 +24,29 @@ function Daily(props) {
 
   const { item, typeId } = props;
 
-  return (
+  const hasSelectedType = (daily) => {
+    if (typeId === 0) {
+      console.log('show all types');
+      return true;
+    } else {
+      return daily.recordList.filter((item) => item.categoryId === typeId)
+        .length === 0
+        ? false
+        : true;
+    }
+  };
+
+  return hasSelectedType(item) ? (
     <DailyWrapper>
       <SectionHeader>{item.date.format('MM-DD').toString()}</SectionHeader>
       {item.recordList
         .filter((item) => (typeId === 0 ? item : item.categoryId === typeId))
         .map((record) => {
-          return <SingleRecord record={record} />;
+          return <SingleRecord record={record} key={record.id} />;
         })}
     </DailyWrapper>
+  ) : (
+    <div></div>
   );
 }
 
