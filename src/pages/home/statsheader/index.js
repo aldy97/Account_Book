@@ -14,10 +14,12 @@ function StatesHeader(props) {
   const [expense, setExpense] = useState(0);
   const [income, setIncome] = useState(0);
 
+  //DailyRecord[]
   const filteredMonthList = DEFAULT_RECORDS.filter(
     (item) => item.date.format('MM') === month.format('MM')
   );
 
+  //number[][]
   const filteredList = filteredMonthList
     .map((daily) => daily.recordList)
     .map((recordList) =>
@@ -36,7 +38,9 @@ function StatesHeader(props) {
     amountList.filter((amount) => amount < 0)
   );
 
+  //number
   let currentExpense = 0;
+  //number
   let currentIncome = 0;
 
   for (const i in filteredIncomeList) {

@@ -6,6 +6,9 @@ import theme from '../../../static/theme';
 function Daily(props) {
   const DailyWrapper = styled.div`
     border-bottom: 1px solid #666;
+    @media (max-width: 500px) {
+      width: calc(100vw);
+    }
   `;
 
   const SectionHeader = styled.div`
@@ -19,6 +22,9 @@ function Daily(props) {
     span {
       float: right;
       margin-right: ${theme.$marginLeft};
+    }
+    @media (max-width: 500px) {
+      width: calc(100vw);
     }
   `;
 
