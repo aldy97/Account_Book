@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SingleRecord from './SingleRecord';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
@@ -28,16 +28,24 @@ function Daily(props) {
 
   let currentBalance = 0;
 
-  const a = item.recordList.filter((item) => (typeId === 0 ? item : item.categoryId === typeId)).map(record => record.amount);
-  for(const i in a) { currentBalance += a[i]} 
+  const a = item.recordList
+    .filter((item) => (typeId === 0 ? item : item.categoryId === typeId))
+    .map((record) => record.amount);
+
+  for (const i in a) {
+    currentBalance += a[i];
+  }
 
   useEffect(() => {
     setBalance(currentBalance);
-  })
- 
+  }, [currentBalance]);
+
   return hasSelectedType(item) ? (
     <DailyWrapper>
-      <SectionHeader>{item.date.format('MM-DD').toString()}<span>Daily balance: {balance}</span></SectionHeader>
+      <SectionHeader>
+        {item.date.format('MM-DD').toString()}
+        <span>Daily balance: {balance}</span>
+      </SectionHeader>
       {item.recordList
         .filter((item) => (typeId === 0 ? item : item.categoryId === typeId))
         .map((record) => {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Daily from './daily';
 import styled from 'styled-components';
 import theme from '../../../static/theme';
@@ -27,7 +27,7 @@ function Central(props) {
     }
   `;
 
-  const { month, typeId, setExpense, setIncome } = props;
+  const { month, typeId } = props;
 
   const filteredMonthList = DEFAULT_RECORDS.filter(
     (item) => item.date.format('MM') === month.format('MM')
@@ -42,7 +42,7 @@ function Central(props) {
         .length === 0
         ? false
         : true;
-     }
+    }
   };
 
   //检查当前选中的月份是否有所选的类型
@@ -53,16 +53,6 @@ function Central(props) {
       return true;
     }
   };
-
-  useEffect(() => {
-    const list = filteredMonthList.filter(item => hasSelectedType(item));
-    console.log(list.map(item => item.recordList));
-    let expense = 0;
-    let income = 0;
-    // if (typeId === 0) {
-    //   expense += filteredMonthList.map();
-    // }
-  })
 
   return (
     <StyledCentral>

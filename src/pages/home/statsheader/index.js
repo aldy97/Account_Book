@@ -1,19 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { DEFAULT_RECORDS } from '../central/record';
 import { Wrapper, TypeFilter, MonthFilter } from './style';
 import { ExpenseList, IncomeList, AllType } from '../../../static/itemList';
 
 //过滤器（类型选择 + 月份选择), 以及支出/收入显示
 function StatesHeader(props) {
-  const {
-    typeId,
-    month,
-    handleSetShow,
-    handleSetShowMonth,
-    expense,
-    income,
-  } = props;
+  const { typeId, month, handleSetShow, handleSetShowMonth } = props;
+
   const list = AllType.concat(ExpenseList).concat(IncomeList);
+  //被选中的消费/支出类型：对象
   const item = list.filter((item) => item.id === typeId)[0];
+
+  const [expense, setExpense] = useState(0);
+  const [income, setIncome] = useState(0);
+
+  const filteredMonthList = DEFAULT_RECORDS.filter(
+    (item) => item.date.format('MM') === month.format('MM')
+  );
+
+  const filteredList = filteredMonthList
+    .map((daily) => daily.recordList)
+    .map((recordList) =>
+      recordList.filter((record) =>
+        typeId === 0 ? record : record.categoryId === typeId
+      )
+    )
+    .map((recordList) => recordList.map((item) => item.amount));
+
+  //number[][]
+  const filteredIncomeList = filteredList.map((amountList) =>
+    amountList.filter((amount) => amount > 0)
+  );
+  //number[][]
+  const filteredExpenseList = filteredList.map((amountList) =>
+    amountList.filter((amount) => amount < 0)
+  );
+
+  let currentExpense = 0;
+  let currentIncome = 0;
+
+  for (const i in filteredIncomeList) {
+    for (const j in filteredIncomeList[i]) {
+      currentIncome += filteredIncomeList[i][j];
+    }
+  }
+
+  for (const i in filteredExpenseList) {
+    for (const j in filteredExpenseList[i]) {
+      currentExpense += filteredExpenseList[i][j];
+    }
+  }
+
+  useEffect(() => {
+    setIncome(currentIncome);
+    setExpense(currentExpense);
+  }, [currentIncome, currentExpense]);
 
   return (
     <Wrapper>
