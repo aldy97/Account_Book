@@ -22,16 +22,32 @@ function StatesHeader(props) {
         <i className={`iconfont ${item.icon}`}></i>
       </TypeFilter>
       <MonthFilter>
-        <span className='date' onClick={handleSetShowMonth} style={{cursor: 'pointer'}}>
+        <span
+          className='date'
+          onClick={handleSetShowMonth}
+          style={{ cursor: 'pointer' }}
+        >
           {month.format('MMMM YYYY')}
-          <i className='iconfont' name='arrow-down' style={{ marginLeft: 4 }}>
-            &#xe668;
-          </i>
+          <i
+            className='iconfont icon-jiantou-copy-copy'
+            style={{ marginLeft: 4 }}
+          />
         </span>
-        <span className={expense === 0 ? 'hidden' :''} style={{ marginRight: 8 }}>
-          Expense{typeId === 0 ? '' : ` on ${list[typeId].name}`}: ${expense.toFixed(2)}
+        <span
+          className={list[typeId].id > 21 ? 'hidden' : ''}
+          style={{ marginRight: 8 }}
+        >
+          Expense{typeId === 0 ? '' : ` on ${list[typeId].name}`}: $
+          {expense.toFixed(2)}
         </span>
-        <span className={income === 0 ? 'hidden' :''}> Income{typeId === 0 ? '' : ` from ${list[typeId].name}`}: ${income.toFixed(2)}</span>
+        <span
+          className={
+            list[typeId].id < 22 && list[typeId].id > 0 ? 'hidden' : ''
+          }
+        >
+          Income{typeId === 0 ? '' : ` from ${list[typeId].name}`}: $
+          {income.toFixed(2)}
+        </span>
       </MonthFilter>
     </Wrapper>
   );
