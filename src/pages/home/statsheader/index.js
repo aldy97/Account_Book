@@ -43,12 +43,14 @@ function StatesHeader(props) {
   //number
   let currentIncome = 0;
 
+  //total income: number
   for (const i in filteredIncomeList) {
     for (const j in filteredIncomeList[i]) {
       currentIncome += filteredIncomeList[i][j];
     }
   }
 
+  //total expense: number
   for (const i in filteredExpenseList) {
     for (const j in filteredExpenseList[i]) {
       currentExpense += filteredExpenseList[i][j];

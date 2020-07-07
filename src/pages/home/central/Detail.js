@@ -97,7 +97,7 @@ function Detail(props) {
           {record.category}
         </Header>
         <Amount>
-          {record.type === 'expense' ? '-' : '+'} {record.amount}
+          {record.type === 'income' ? '+' : ''} {record.amount}
         </Amount>
         <Bottom>
           <span style={{ color: 'red', borderRight: '1px solid #eee' }}>
