@@ -96,6 +96,7 @@ function StatesHeader(props) {
           {income.toFixed(2)}
         </span>
       </MonthFilter>
+      x
     </Wrapper>
   );
 }

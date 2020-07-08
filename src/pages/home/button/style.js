@@ -12,10 +12,13 @@ export const ButtonWrapper = styled.button`
   text-align: center;
   position: fixed;
   bottom: 100px;
-  margin-left: 28px;
+  left: 900px;
   z-index: 10;
   i {
     font-size: 25px;
     color: ${theme.$blue};
+  }
+  @media (max-width: 500px) {
+    left: calc(80vw);
   }
 `;
