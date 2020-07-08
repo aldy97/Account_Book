@@ -23,9 +23,6 @@ function SingleRecord(props) {
     font-weight: 100;
     border-bottom: 1px solid #eee;
     cursor: pointer;
-    &: hover {
-      background: #eee;
-    }
     @media (max-width: 500px) {
       width: calc(100vw);
     }
@@ -67,7 +64,7 @@ function SingleRecord(props) {
             marginRight: `${theme.$marginLeft}`,
           }}
         >
-          <span style={{ marginLeft: 5 }}>{record.amount}</span>
+          {record.amount}
         </span>
       </Specification>
       {getDetail(showDetail)}

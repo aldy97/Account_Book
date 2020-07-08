@@ -12,6 +12,7 @@ function Daily(props) {
   `;
 
   const SectionHeader = styled.div`
+    width: ${theme.$width};
     background: #fff;
     height: ${theme.$barHeight};
     border-bottom: 1px solid #eee;
@@ -21,7 +22,7 @@ function Daily(props) {
     font-size: ${theme.$smallTextSize};
     span {
       float: right;
-      margin-right: ${theme.$marginLeft};
+      margin-right: 30px;
     }
     @media (max-width: 500px) {
       width: calc(100vw);
