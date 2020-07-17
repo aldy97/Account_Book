@@ -69,7 +69,7 @@ function Central(props) {
           );
         })
       ) : (
-        <NoData>----No data----</NoData>
+        <NoData>No Data</NoData>
       )}
     </StyledCentral>
   );

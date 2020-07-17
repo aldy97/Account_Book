@@ -49,7 +49,11 @@ function Setting() {
         />
         Contact me
       </Item>
-      <Item>
+      <Item
+        onClick={() => {
+          window.location.href = '/';
+        }}
+      >
         <i
           className='iconfont icon-shezhi'
           style={{ fontWeight: 800, color: `${theme.$orange}` }}
