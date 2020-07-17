@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from '../../commons/header';
+import Footer from '../../commons/footer';
 import theme from '../../static/theme/index';
 import { Item } from './style';
 
@@ -12,6 +14,7 @@ function Setting() {
         background: '#eee',
       }}
     >
+      <Header />
       <Item style={{ marginBottom: 8 }}>
         <i
           className='iconfont icon-erweima'
@@ -53,6 +56,7 @@ function Setting() {
         />
         General Settings
       </Item>
+      <Footer />
     </div>
   );
 }

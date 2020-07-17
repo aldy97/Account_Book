@@ -12,7 +12,6 @@ export const ButtonWrapper = styled.button`
   text-align: center;
   position: fixed;
   bottom: 100px;
-  left: 900px;
   z-index: 10;
   i {
     font-size: 25px;

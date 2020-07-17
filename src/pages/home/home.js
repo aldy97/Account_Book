@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from '../../commons/header';
+import Footer from '../../commons/footer';
 import StateHeader from './statsheader/index';
 import Type from './type/index';
 import SelectMonth from './month/index';
@@ -79,6 +81,7 @@ function Home() {
 
   return (
     <StyledHome>
+      <Header />
       <StateHeader
         handleSetShow={handleSetShow}
         handleSetShowMonth={handleSetShowMonth}
@@ -90,6 +93,7 @@ function Home() {
       {showType(show)}
       {showSelectedMonth(showMonth)}
       {showDrawer(showMoney)}
+      <Footer />
     </StyledHome>
   );
 }

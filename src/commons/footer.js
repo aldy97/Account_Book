@@ -46,8 +46,8 @@ function Footer() {
   return (
     <FooterWrapper>
       <div
-        className={keyword === '' ? 'navItem isSelected' : 'navItem'}
-        onClick={() => handleClick('')}
+        className={keyword === 'summary' ? 'navItem isSelected' : 'navItem'}
+        onClick={() => handleClick('summary')}
       >
         <i className='iconfont'>&#xe689;</i>
         <div className='text'>Summary</div>
